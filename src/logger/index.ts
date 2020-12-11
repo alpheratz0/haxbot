@@ -13,9 +13,10 @@ export class LoggerStyles {
 
     cssify(): string {
         return `background-color: ${this.backgroundColor || 'inherit'}; 
-                color: ${this.color || 'inherit'};
-                padding: ${this.paddingY || 0}px ${this.paddingX || 0}px;
-                border-radius: 4px;`;
+                color: ${this.color || 'white'};
+                padding: ${this.paddingY || 3}px ${this.paddingX || 5}px;
+                border-radius: 3px;
+                font-size: .7rem;`;
     }
 }
 
