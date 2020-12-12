@@ -62,3 +62,28 @@ export abstract class Command<TContext extends CommandContext> {
      */
     abstract test(name: string, context: TContext): boolean;
 }
+
+export class CommandFactory<TContext extends CommandContext> {
+    private m_commands: Command<TContext>[];
+
+    constructor() {
+        this.m_commands = [];
+    }
+
+    process(cmdName: string, context: TContext): boolean {
+        cmdName = cmdName.toLowerCase();
+        for(let command of this.m_commands) {
+            if(command.test(cmdName, context)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    add(commands: Command<TContext>[]): void {
+        for(let command of commands)
+            if(!this.m_commands.find(cmd => cmd.name.toLowerCase() == command.name.toLowerCase()))
+                this.m_commands.push(command);
+    }
+}
