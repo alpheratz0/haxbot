@@ -4,12 +4,14 @@ import { Scores } from './api/scores'
 import { GameCommandManager } from './commands/game'
 import { Logger, LoggerStyles } from './logger'
 import { Futsalx3 } from './stadiums/futsal-x3'
+import { PlayerDB } from './storage/player-db'
 
 // Room events
 
 room.onRoomLink = (url: string) => {  
     Logger.logEvent('roomlink', url, new LoggerStyles('orange'));
     GameCommandManager.load();
+    PlayerDB.connect("playerdb");
 
     // Game default settings
     room.setScoreLimit(3);
