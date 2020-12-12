@@ -7,12 +7,12 @@ export interface Predicate<T> {
 
 /** Class that manages player persistent storage using the indexedDB API. */
 export class PlayerDB {
-    private db: IDBDatabase;
+    private static db: IDBDatabase;
     
     /** Connects to the database with the specified name. 
      * @param dbName The database name.
     */
-    async connect(dbName: string): Promise<void> {
+    static async connect(dbName: string): Promise<void> {
         return new Promise((resolve, reject) => {
             const request = indexedDB.open(dbName);
             
@@ -41,7 +41,7 @@ export class PlayerDB {
     /** Adds a player to the database. 
      * @param player The player to add.
     */
-    async add(player: PlayerRecord): Promise<void> {
+    static async add(player: PlayerRecord): Promise<void> {
         return new Promise((resolve, reject) => {
             const store = this.db.transaction("players", "readwrite").objectStore("players");
             const request = store.add(player);
@@ -54,7 +54,7 @@ export class PlayerDB {
     /** Updates the specified player with the new values.
      * @param player The player updated.
      */
-    async update(player: PlayerRecord): Promise<void> {
+    static async update(player: PlayerRecord): Promise<void> {
         return new Promise((resolve, reject) => {
             const store = this.db.transaction("players", "readwrite").objectStore("players");
             const request = store.put(player);
@@ -67,7 +67,7 @@ export class PlayerDB {
     /** Returns the player with the specified auth.
      * @param auth The player's auth.
      */
-    async find(auth: string): Promise<PlayerRecord|null> {
+    static async find(auth: string): Promise<PlayerRecord|null> {
         return new Promise((resolve, reject) => {
             const store = this.db.transaction("players").objectStore("players");
             const request = store.get(auth);
@@ -80,7 +80,7 @@ export class PlayerDB {
     /** Returns the player with the specified name.
      * @param name The player's name.
      */
-    async findByName(name: string): Promise<PlayerRecord|null> {
+    static async findByName(name: string): Promise<PlayerRecord|null> {
         return new Promise((resolve, reject) => {
             const store = this.db.transaction("players").objectStore("players");
             const index = store.index("names");
@@ -95,7 +95,7 @@ export class PlayerDB {
     /** Returns if a player with the specified auth exists. 
      * @param auth The player's auth.
     */
-    async exists(auth: string): Promise<boolean> {
+    static async exists(auth: string): Promise<boolean> {
         return new Promise<boolean>((resolve, reject) => {
             const store = this.db.transaction("players").objectStore("players");
             const request = store.count(auth);
@@ -108,7 +108,7 @@ export class PlayerDB {
     /** Returns if a player with the specified name exists. 
      * @param name The player's name.
     */
-    async existsName(name: string): Promise<boolean> {
+    static async existsName(name: string): Promise<boolean> {
         return new Promise<boolean>((resolve, reject) => {
             const store = this.db.transaction("players").objectStore("players");
             const index = store.index("names");
@@ -123,7 +123,7 @@ export class PlayerDB {
     /** Returns all players that meet the predicate condition. 
      * @param func The predicate function.
     */
-    async where(func: Predicate<PlayerRecord>): Promise<PlayerRecord[]> {
+    static async where(func: Predicate<PlayerRecord>): Promise<PlayerRecord[]> {
         return new Promise<PlayerRecord[]>((resolve, reject) => {
             const store = this.db.transaction("players").objectStore("players");
             const request = store.openCursor();
@@ -147,7 +147,7 @@ export class PlayerDB {
     }
 
     /** Get the three players with the best goal score. */
-    async getTopScorers(): Promise<PlayerRecord[]> {
+    static async getTopScorers(): Promise<PlayerRecord[]> {
         return new Promise<PlayerRecord[]>((resolve, reject) => {
             const store = this.db.transaction("players").objectStore("players");
             const index = store.index("goals");
