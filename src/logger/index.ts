@@ -20,8 +20,16 @@ export class LoggerStyles {
     }
 }
 
+export interface LogEventCallback {
+    (event: string, message: string, eventStyle: LoggerStyles): void;
+}
+
 export class Logger {
+    static onlogevent: LogEventCallback;
+
     static logEvent(event: string, message: string, eventStyle: LoggerStyles): void {
+        if(this.onlogevent) 
+            this.onlogevent(event, message, eventStyle);
         console.log(`%c${event}%c ${message}`, eventStyle.cssify(), '');
     }
 }
