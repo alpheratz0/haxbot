@@ -1,14 +1,25 @@
+import { room } from './room'
 import { Player } from './api/player'
 import { Scores } from './api/scores'
 import { GameCommandManager } from './commands/game'
 import { Logger, LoggerStyles } from './logger'
-import { room } from './room'
+import { Futsalx3 } from './stadiums/futsal-x3'
 
 // Room events
 
 room.onRoomLink = (url: string) => {  
     Logger.logEvent('roomlink', url, new LoggerStyles('orange'));
     GameCommandManager.load();
+
+    // Game default settings
+    room.setScoreLimit(3);
+    room.setTimeLimit(3);
+    room.setTeamsLock(true); 
+    room.setCustomStadium(Futsalx3);
+
+    room.setTeamColors(1, 0, 0xffffff, [0xff4912]);
+    room.setTeamColors(2, 0, 0xffffff, [0x000000]);
+    room.setRequireRecaptcha(false);
 }
 
 room.onPlayerJoin = (player: Player) => {   
