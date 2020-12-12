@@ -1,5 +1,6 @@
 import { Player } from './api/player'
 import { Scores } from './api/scores'
+import { GameCommandManager } from './commands/game'
 import { Logger, LoggerStyles } from './logger'
 import { room } from './room'
 
@@ -7,7 +8,7 @@ import { room } from './room'
 
 room.onRoomLink = (url: string) => {  
     Logger.logEvent('roomlink', url, new LoggerStyles('orange'));
-
+    GameCommandManager.load();
 }
 
 room.onPlayerJoin = (player: Player) => {   
