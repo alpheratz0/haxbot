@@ -123,7 +123,7 @@ export class PlayerDB {
     /** Returns all players that meet the predicate condition. 
      * @param func The predicate function.
     */
-    static async where(func: Predicate<PlayerRecord>): Promise<PlayerRecord[]> {
+    static async where(func: Predicate<PlayerRecord>, maxResults: number = 5): Promise<PlayerRecord[]> {
         return new Promise<PlayerRecord[]>((resolve, reject) => {
             const store = this.db.transaction("players").objectStore("players");
             const request = store.openCursor();
@@ -131,7 +131,7 @@ export class PlayerDB {
 
             request.onsuccess = (evt) => {
                 const cursor = request.result;
-                if(cursor) {
+                if(cursor && items.length < maxResults) {
                     const player = PlayerRecord.fromPartial(cursor.value);
                     if(func(player))
                         items.push(player);
