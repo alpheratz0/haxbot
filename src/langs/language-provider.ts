@@ -18,3 +18,5 @@ export class LanguageProvider {
         this.current = lang;
     }
 }
+
+LanguageProvider.add(LanguageMap.english('Multiple connections from the same computer isnt allowed.').spanish('Conexiones multiples desde una misma PC no esta permitido.'));

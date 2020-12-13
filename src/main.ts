@@ -5,6 +5,8 @@ import { GameCommandManager } from './commands/game'
 import { Logger, LoggerStyles } from './logger'
 import { Futsalx3 } from './stadiums/futsal-x3'
 import { PlayerDB } from './storage/player-db'
+import { Connection } from './firewall/connection'
+import { LanguageProvider } from './langs/language-provider'
 
 // Room events
 
@@ -26,12 +28,18 @@ room.onRoomLink = (url: string) => {
 
 room.onPlayerJoin = (player: Player) => {   
     Logger.logEvent('playerjoin', player.name, new LoggerStyles('skyblue'));
+    Connection.add(player);
+
+    if(Connection.count(player) > 1) {
+        room.kickPlayer(player.id, LanguageProvider.get('Multiple connections from the same computer isnt allowed.'), false);
+        return;
+    }
 
 }
 
 room.onPlayerLeave = (player: Player) => {
     Logger.logEvent('playerleave', player.name, new LoggerStyles('red'));
-
+    Connection.remove(player);
 }
 
 room.onStadiumChange = (newStadiumName: string, byPlayer: Player) => {
