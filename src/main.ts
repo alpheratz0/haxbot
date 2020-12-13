@@ -12,6 +12,7 @@ import { PlayerRecord } from './storage/player-record'
 import { AdminManager } from './util/admin-manager'
 import { TeamID } from './api/team-id'
 import { colors } from './room/configuration'
+import { SpamFilter } from './firewall/spam'
 
 // Room events
 
@@ -99,6 +100,10 @@ room.onPlayerKicked = async (kickedPlayer: Player, reason: string, ban: boolean,
 
 room.onPlayerChat = (player: Player, message: string) => { 
     Logger.logEvent('playerchat', player.name + ': ' + message, new LoggerStyles('skyblue'));
+    if(SpamFilter.match(message)) {
+        room.kickPlayer(player.id, LanguageProvider.get('Spamming the room is forbidden.'), !player.admin);
+        return false;
+    }
 
     return true;
 }
