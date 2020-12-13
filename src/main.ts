@@ -105,7 +105,14 @@ room.onPlayerChat = (player: Player, message: string) => {
         return false;
     }
 
-    return true;
+    PlayerDB.findByName(player.name).then(record => {
+        if(record.isMuted()) {
+            room.sendAnnouncement(LanguageProvider.get('You are silenced.'), player.id, colors.error);
+            return;
+        }
+    });
+
+    return false;
 }
 
 // Playing events

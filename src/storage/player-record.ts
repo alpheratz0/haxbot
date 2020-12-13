@@ -40,4 +40,8 @@ export class PlayerRecord {
     elo(): number {
         return this.goals * 120 + this.assists * 120 + this.ownGoals * -120 + this.undefeated * 240 + this.wins * 300 + this.loses * -300; 
     }
+
+    isMuted(): boolean {
+        return this.mutedUntil > Date.now();
+    }
 }
