@@ -3,14 +3,6 @@ import { Player } from "../../api/player";
 import { Command, CommandContext, CommandFactory } from "..";
 import { PlayerRecord } from "../../storage/player-record";
 
-export class GameCommandManager {
-
-    /** Loads all commands. */
-    static load(): void {
-        // TODO: Add commands
-    }
-}
-
 export class GameCommandContext implements CommandContext {
     public readonly sender: Player;
     public readonly args: string[];

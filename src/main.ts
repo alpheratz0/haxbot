@@ -1,7 +1,7 @@
 import { room } from './room'
 import { Player } from './api/player'
 import { Scores } from './api/scores'
-import { GameCommandFactory, GameCommandManager, GameCommandContext } from './commands/game'
+import { GameCommandFactory, GameCommandContext } from './commands/game'
 import { Logger, LoggerStyles } from './logger'
 import { Futsalx3 } from './stadiums/futsal-x3'
 import { PlayerDB } from './storage/player-db'
@@ -17,6 +17,7 @@ import { Chat } from './util/chat'
 import { CommandInput } from './commands'
 import { Camera } from './util/camera'
 import { Game } from './game'
+import { GameCommandManager } from './commands/game/loader'
 
 // Room events
 
