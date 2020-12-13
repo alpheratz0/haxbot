@@ -10,6 +10,7 @@ import { LanguageProvider } from './langs/language-provider'
 import { AuthSystem } from './firewall/auth-system'
 import { PlayerRecord } from './storage/player-record'
 import { AdminManager } from './util/admin-manager'
+import { TeamID } from './api/team-id'
 
 // Room events
 
@@ -58,6 +59,13 @@ room.onPlayerJoin = (player: Player) => {
 room.onPlayerLeave = (player: Player) => {
     Logger.logEvent('playerleave', player.name, new LoggerStyles('red'));
     Connection.remove(player);
+
+    if(player.team != TeamID.Spectators) {
+        room.pauseGame(true);
+    }
+
+    if(AdminManager.getAdminCount() == 0)
+        AdminManager.giveRandomAdmin();
 }
 
 room.onStadiumChange = (newStadiumName: string, byPlayer: Player) => {
