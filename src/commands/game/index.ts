@@ -11,7 +11,7 @@ export class GameCommandManager {
     }
 }
 
-export class HaxballCommandContext implements CommandContext {
+export class GameCommandContext implements CommandContext {
     public readonly sender: Player;
     public readonly args: string[];
     public readonly record: PlayerRecord;
@@ -25,8 +25,8 @@ export class HaxballCommandContext implements CommandContext {
     }
 }
 
-export class UserCommand extends Command<HaxballCommandContext> {
-    test(name: string, context: HaxballCommandContext): boolean {
+export class UserCommand extends Command<GameCommandContext> {
+    test(name: string, context: GameCommandContext): boolean {
         if(this.name == name) {
             this.run(context);
             return true;
@@ -36,8 +36,8 @@ export class UserCommand extends Command<HaxballCommandContext> {
     }
 }
 
-export class AdministrativeCommand extends Command<HaxballCommandContext> {
-    test(name: string, context: HaxballCommandContext): boolean {
+export class AdministrativeCommand extends Command<GameCommandContext> {
+    test(name: string, context: GameCommandContext): boolean {
         if(this.name == name) {
             if(context.record.isSuperUser || context.sender.admin) 
                 this.run(context);
@@ -49,8 +49,8 @@ export class AdministrativeCommand extends Command<HaxballCommandContext> {
     }
 }
 
-export class SuperUserCommand extends Command<HaxballCommandContext> {
-    test(name: string, context: HaxballCommandContext): boolean {
+export class SuperUserCommand extends Command<GameCommandContext> {
+    test(name: string, context: GameCommandContext): boolean {
         if(this.name == name) {
             if(context.record.isSuperUser) 
                 this.run(context);
@@ -62,4 +62,4 @@ export class SuperUserCommand extends Command<HaxballCommandContext> {
     }
 }
 
-export const GameCommandFactory = new CommandFactory<HaxballCommandContext>();
+export const GameCommandFactory = new CommandFactory<GameCommandContext>();

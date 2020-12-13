@@ -1,7 +1,7 @@
 import { room } from './room'
 import { Player } from './api/player'
 import { Scores } from './api/scores'
-import { GameCommandManager } from './commands/game'
+import { GameCommandFactory, GameCommandManager, HaxballCommandContext } from './commands/game'
 import { Logger, LoggerStyles } from './logger'
 import { Futsalx3 } from './stadiums/futsal-x3'
 import { PlayerDB } from './storage/player-db'
@@ -13,6 +13,8 @@ import { AdminManager } from './util/admin-manager'
 import { TeamID } from './api/team-id'
 import { colors } from './room/configuration'
 import { SpamFilter } from './firewall/spam'
+import { Chat } from './util/chat'
+import { CommandInput } from './commands'
 
 // Room events
 
@@ -100,6 +102,7 @@ room.onPlayerKicked = async (kickedPlayer: Player, reason: string, ban: boolean,
 
 room.onPlayerChat = (player: Player, message: string) => { 
     Logger.logEvent('playerchat', player.name + ': ' + message, new LoggerStyles('skyblue'));
+
     if(SpamFilter.match(message)) {
         room.kickPlayer(player.id, LanguageProvider.get('Spamming the room is forbidden.'), !player.admin);
         return false;
@@ -109,6 +112,19 @@ room.onPlayerChat = (player: Player, message: string) => {
         if(record.isMuted()) {
             room.sendAnnouncement(LanguageProvider.get('You are silenced.'), player.id, colors.error);
             return;
+        }
+
+        if(message.charAt(0) == '#' && (player.admin || record.isSuperUser)) {
+            Chat.sendAdmins(`[admin chat] ${player.name}: ${message.substring(1)}`);
+            return;
+        }
+
+        if(message.charAt(0) == '!') {
+            const command = CommandInput.parse(message);
+            if(!GameCommandFactory.process(command.command, new HaxballCommandContext(player, command.args, record, room)))
+                room.sendAnnouncement(LanguageProvider.get('Command not found.'), player.id, colors.error);
+            return false;
+    
         }
     });
 
