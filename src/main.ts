@@ -15,6 +15,7 @@ import { colors } from './room/configuration'
 import { SpamFilter } from './firewall/spam'
 import { Chat } from './util/chat'
 import { CommandInput } from './commands'
+import { Camera } from './util/camera'
 
 // Room events
 
@@ -141,7 +142,7 @@ room.onPlayerChat = (player: Player, message: string) => {
 // Playing events
 
 room.onGameStart = (byPlayer: Player) => {
-
+    Camera.record();
 }
 
 room.onGameTick = () => {
@@ -161,5 +162,5 @@ room.onTeamVictory = (scores: Scores) => {
 }
 
 room.onGameStop = (byPlayer: Player) => {
-
+    Camera.stop();
 }
