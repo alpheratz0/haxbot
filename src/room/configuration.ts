@@ -11,5 +11,6 @@ export const roomConfiguration: RoomConfig = {
 }
 
 export const colors = {
-    information: 0xd1ac26
+    information: 0xd1ac26,
+    error: 0xc41c10
 }

@@ -11,6 +11,7 @@ import { AuthSystem } from './firewall/auth-system'
 import { PlayerRecord } from './storage/player-record'
 import { AdminManager } from './util/admin-manager'
 import { TeamID } from './api/team-id'
+import { colors } from './room/configuration'
 
 // Room events
 
@@ -68,9 +69,13 @@ room.onPlayerLeave = (player: Player) => {
         AdminManager.giveRandomAdmin();
 }
 
-room.onStadiumChange = (newStadiumName: string, byPlayer: Player) => {
+room.onStadiumChange = async (newStadiumName: string, byPlayer: Player) => {
     Logger.logEvent('stadiumchange', newStadiumName, new LoggerStyles('blue'));
-
+    
+    if(byPlayer && !(await PlayerDB.findByName(byPlayer.name)).isSuperUser) {
+        room.sendAnnouncement(LanguageProvider.get('Use !futsal3 !futsal1 or !futsalpen to change the map.'), byPlayer.id, colors.error);
+        room.setCustomStadium(Futsalx3);
+    }
 }
 
 room.onPlayerAdminChange = (changedPlayer: Player, byPlayer: Player) => {
