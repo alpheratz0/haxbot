@@ -1,7 +1,7 @@
 import { room } from './room'
 import { Player } from './api/player'
 import { Scores } from './api/scores'
-import { GameCommandFactory, GameCommandManager, HaxballCommandContext } from './commands/game'
+import { GameCommandFactory, GameCommandManager, GameCommandContext } from './commands/game'
 import { Logger, LoggerStyles } from './logger'
 import { Futsalx3 } from './stadiums/futsal-x3'
 import { PlayerDB } from './storage/player-db'
@@ -121,11 +121,18 @@ room.onPlayerChat = (player: Player, message: string) => {
 
         if(message.charAt(0) == '!') {
             const command = CommandInput.parse(message);
-            if(!GameCommandFactory.process(command.command, new HaxballCommandContext(player, command.args, record, room)))
+            if(!GameCommandFactory.process(command.command, new GameCommandContext(player, command.args, record, room)))
                 room.sendAnnouncement(LanguageProvider.get('Command not found.'), player.id, colors.error);
             return false;
     
         }
+
+        if(record.rainbow) {
+            Chat.rainbow(player.name + " [" + player.id + "]: " + message); 
+            return;
+        }
+
+        room.sendAnnouncement(player.name + " [" + player.id + "]: " + message, null, record.color || 0xffffff);
     });
 
     return false;
