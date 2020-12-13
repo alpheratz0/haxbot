@@ -9,6 +9,7 @@ import { Connection } from './firewall/connection'
 import { LanguageProvider } from './langs/language-provider'
 import { AuthSystem } from './firewall/auth-system'
 import { PlayerRecord } from './storage/player-record'
+import { AdminManager } from './util/admin-manager'
 
 // Room events
 
@@ -46,6 +47,9 @@ room.onPlayerJoin = (player: Player) => {
         if(record) {
             if(record.welcomeMessage) room.sendAnnouncement(record.welcomeMessage, undefined, 0xd1ac26, 'bold');
             else room.sendAnnouncement(LanguageProvider.get('Welcome to the futsal bot, use !help to see commands.'), player.id, 0xd1ac26, 'bold');
+
+            if(AdminManager.getAdminCount() == 0)
+                AdminManager.giveRandomAdmin();
         }
         else room.kickPlayer(player.id, LanguageProvider.get('Name taken.'), false);
     });
