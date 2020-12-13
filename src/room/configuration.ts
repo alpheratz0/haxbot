@@ -9,3 +9,7 @@ export const roomConfiguration: RoomConfig = {
     password: undefined,
     public: false
 }
+
+export const colors = {
+    information: 0xd1ac26
+}

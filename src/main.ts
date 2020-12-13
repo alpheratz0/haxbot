@@ -7,6 +7,7 @@ import { Futsalx3 } from './stadiums/futsal-x3'
 import { PlayerDB } from './storage/player-db'
 import { Connection } from './firewall/connection'
 import { LanguageProvider } from './langs/language-provider'
+import { AuthSystem } from './firewall/auth-system'
 
 // Room events
 
@@ -35,6 +36,13 @@ room.onPlayerJoin = (player: Player) => {
         return;
     }
 
+    AuthSystem.authenticate(player.auth, player.name).then(record => {
+        if(record) {
+            if(record.welcomeMessage) room.sendAnnouncement(record.welcomeMessage, player.id, 0xd1ac26, 'bold');
+            else room.sendAnnouncement(LanguageProvider.get('Welcome to the futsal bot, use !help to see commands.'), player.id, 0xd1ac26, 'bold');
+        }
+        else room.kickPlayer(player.id, LanguageProvider.get('Name taken.'), false);
+    });
 }
 
 room.onPlayerLeave = (player: Player) => {

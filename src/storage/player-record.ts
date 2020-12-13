@@ -33,6 +33,10 @@ export class PlayerRecord {
         return result;
     }
 
+    static isValidName(name: string): boolean {
+        return !(name.includes(`"`) || name.includes(`'`) || name.includes("`") || name.toLowerCase().includes("root"));
+    }
+
     elo(): number {
         return this.goals * 120 + this.assists * 120 + this.ownGoals * -120 + this.undefeated * 240 + this.wins * 300 + this.loses * -300; 
     }
