@@ -8,6 +8,7 @@ import { PlayerDB } from './storage/player-db'
 import { Connection } from './firewall/connection'
 import { LanguageProvider } from './langs/language-provider'
 import { AuthSystem } from './firewall/auth-system'
+import { PlayerRecord } from './storage/player-record'
 
 // Room events
 
@@ -33,6 +34,11 @@ room.onPlayerJoin = (player: Player) => {
 
     if(Connection.count(player) > 1) {
         room.kickPlayer(player.id, LanguageProvider.get('Multiple connections from the same computer isnt allowed.'), false);
+        return;
+    }
+
+    if(!PlayerRecord.isValidName(player.name)) {
+        room.kickPlayer(player.id, LanguageProvider.get('Invalid name.'), false);
         return;
     }
 

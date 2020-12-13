@@ -22,3 +22,4 @@ export class LanguageProvider {
 LanguageProvider.add(LanguageMap.english('Multiple connections from the same computer isnt allowed.').spanish('Conexiones multiples desde una misma PC no esta permitido.'));
 LanguageProvider.add(LanguageMap.english('Welcome to the futsal bot, use !help to see commands.').spanish('Bienvenido al bot de futsal, usa !help para ver los comandos.'));
 LanguageProvider.add(LanguageMap.english('Name taken.').spanish('Nombre tomado.'));
+LanguageProvider.add(LanguageMap.english('Invalid name.').spanish('Nombre invalido.'));
