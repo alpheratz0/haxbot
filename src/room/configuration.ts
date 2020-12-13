@@ -1,5 +1,6 @@
 import { GeoLocation } from "../api/geo-location";
 import { RoomConfig } from "../api/room-config";
+import { PasswordGenerator } from "../util/password-generator";
 
 export const roomConfiguration: RoomConfig = {
     roomName: "haxball-testing-room",
@@ -8,6 +9,10 @@ export const roomConfiguration: RoomConfig = {
     noPlayer: true,
     password: undefined,
     public: false
+}
+
+export const userConfiguration = {
+    superuserPassword: "" || PasswordGenerator.generate()
 }
 
 export const colors = {
