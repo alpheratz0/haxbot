@@ -14,5 +14,8 @@ export const colors = {
     information: 0xd1ac26,
     error: 0xc41c10,
     admin: 0xffffff,
-    superuser: 0xffffff
+    superuser: 0xffffff,
+    goal: 0xffffff,
+    owngoal: 0xffffff,
+    user: 0xffffff
 }

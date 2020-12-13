@@ -16,6 +16,7 @@ import { SpamFilter } from './firewall/spam'
 import { Chat } from './util/chat'
 import { CommandInput } from './commands'
 import { Camera } from './util/camera'
+import { Game } from './game'
 
 // Room events
 
@@ -146,21 +147,35 @@ room.onGameStart = (byPlayer: Player) => {
 }
 
 room.onGameTick = () => {
+    const ballPos = room.getBallPosition();
+    const ballRadius = room.getDiscProperties(0).radius;
+    const players = room.getPlayerList().filter(p => p.team != TeamID.Spectators);
 
+    for(let player of players) {
+        const playerRadius: number = room.getPlayerDiscProperties(player.id).radius;
+        const distanceToBall: number = Math.sqrt(Math.pow(player.position.x - ballPos.x, 2) + Math.pow(player.position.y - ballPos.y, 2));
+        const triggerDistance: number = playerRadius + ballRadius + 0.01;
+
+        if(distanceToBall < triggerDistance) {
+            Game.touch(player);
+            return;
+        }
+    }
 }
 
 room.onPlayerBallKick = (player: Player) => {
-
+    Game.touch(player);
 }
 
 room.onTeamGoal = (team: number) => {
-
+    Game.goal(team);
 }
 
 room.onTeamVictory = (scores: Scores) => {
-
+    Game.end();
 }
 
 room.onGameStop = (byPlayer: Player) => {
+    Game.end();
     Camera.stop();
 }

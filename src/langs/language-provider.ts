@@ -28,3 +28,7 @@ LanguageProvider.add(LanguageMap.english('You cant ban that player.').spanish('N
 LanguageProvider.add(LanguageMap.english('Spamming the room is forbidden.').spanish('Esta prohibido el spam en la sala.'));
 LanguageProvider.add(LanguageMap.english('You are silenced.').spanish('Te encuentras silenciado.'));
 LanguageProvider.add(LanguageMap.english('Command not found.').spanish('Comando no encontrado.'));
+LanguageProvider.add(LanguageMap.english('Goaaaal by ').spanish('Gooooolazo de '));
+LanguageProvider.add(LanguageMap.english('Assist').spanish('Asistencia'));
+LanguageProvider.add(LanguageMap.english('Own goal by').spanish('Gol en contra del tarado de'));
+LanguageProvider.add(LanguageMap.english('Consecutive wins').spanish('Victorias consecutivas'));
