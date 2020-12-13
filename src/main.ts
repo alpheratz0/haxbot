@@ -81,6 +81,8 @@ room.onStadiumChange = async (newStadiumName: string, byPlayer: Player) => {
 room.onPlayerAdminChange = (changedPlayer: Player, byPlayer: Player) => {
     Logger.logEvent('adminchange: ' + (changedPlayer.admin ? 'on' : 'off'), changedPlayer.name, new LoggerStyles('orange'));
 
+    if(AdminManager.getAdminCount() == 0)
+        AdminManager.giveRandomAdmin();
 }
 
 room.onPlayerKicked = (kickedPlayer: Player, reason: string, ban: boolean, byPlayer: Player) => {
