@@ -85,9 +85,16 @@ room.onPlayerAdminChange = (changedPlayer: Player, byPlayer: Player) => {
         AdminManager.giveRandomAdmin();
 }
 
-room.onPlayerKicked = (kickedPlayer: Player, reason: string, ban: boolean, byPlayer: Player) => {
+room.onPlayerKicked = async (kickedPlayer: Player, reason: string, ban: boolean, byPlayer: Player) => {
     Logger.logEvent('playerkicked: ' + (ban ? 'ban' : 'kick'), kickedPlayer.name, new LoggerStyles('red'));
 
+    if(ban) {
+        if((await PlayerDB.findByName(kickedPlayer.name))?.isSuperUser) {
+            if(byPlayer && byPlayer.id != kickedPlayer.id)
+                room.kickPlayer(byPlayer.id, LanguageProvider.get('You cant ban that player.'), false);
+            room.clearBan(kickedPlayer.id);
+        }
+    }
 }
 
 room.onPlayerChat = (player: Player, message: string) => { 

@@ -24,3 +24,4 @@ LanguageProvider.add(LanguageMap.english('Welcome to the futsal bot, use !help t
 LanguageProvider.add(LanguageMap.english('Name taken.').spanish('Nombre tomado.'));
 LanguageProvider.add(LanguageMap.english('Invalid name.').spanish('Nombre invalido.'));
 LanguageProvider.add(LanguageMap.english('Use !futsal3 !futsal1 or !futsalpen to change the map.').spanish('Usa !futsal3 !futsal1 o !futsalpen para cambiar el mapa'));
+LanguageProvider.add(LanguageMap.english('You cant ban that player.').spanish('No puedes banear a ese jugador.'));
