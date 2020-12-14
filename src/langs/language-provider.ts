@@ -41,3 +41,5 @@ LanguageProvider.add(LanguageMap.english('Cant donate to yourself.').spanish('No
 LanguageProvider.add(LanguageMap.english('Invalid ammount to donate.').spanish('Monto invalido para donar.'));
 LanguageProvider.add(LanguageMap.english('Sent ${0} to {1}.').spanish('Enviaste ${0} a {1}.'));
 LanguageProvider.add(LanguageMap.english('Received ${0} from {1}.').spanish('Recibiste ${0} de {1}.'));
+LanguageProvider.add(LanguageMap.english('Wrong password.').spanish('Contraseña incorrecta.'));
+LanguageProvider.add(LanguageMap.english('Logged successfully.').spanish('Logeado exitosamente.'));
