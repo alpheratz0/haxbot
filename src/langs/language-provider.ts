@@ -33,3 +33,4 @@ LanguageProvider.add(LanguageMap.english('Assist').spanish('Asistencia'));
 LanguageProvider.add(LanguageMap.english('Own goal by').spanish('Gol en contra del tarado de'));
 LanguageProvider.add(LanguageMap.english('Consecutive wins').spanish('Victorias consecutivas'));
 LanguageProvider.add(LanguageMap.english('Celebration message updated.').spanish('Mensaje de celebracion actualizado.'));
+LanguageProvider.add(LanguageMap.english('Welcome message updated.').spanish('Mensaje de bienvenida actualizado.'));
