@@ -37,3 +37,7 @@ LanguageProvider.add(LanguageMap.english('Welcome message updated.').spanish('Me
 LanguageProvider.add(LanguageMap.english('Player not found.').spanish('Jugador no encontrado.'))
 LanguageProvider.add(LanguageMap.english('Message is too short.').spanish('El mensaje es muy corto.'));
 LanguageProvider.add(LanguageMap.english('Cant whisper to yourself.').spanish('No puedes enviarte un mensaje privado a vos mismo.'));
+LanguageProvider.add(LanguageMap.english('Cant donate to yourself.').spanish('No puedes enviarte dinero a vos mismo.'));
+LanguageProvider.add(LanguageMap.english('Invalid ammount to donate.').spanish('Monto invalido para donar.'));
+LanguageProvider.add(LanguageMap.english('Sent ${0} to {1}.').spanish('Enviaste ${0} a {1}.'));
+LanguageProvider.add(LanguageMap.english('Received ${0} from {1}.').spanish('Recibiste ${0} de {1}.'));
