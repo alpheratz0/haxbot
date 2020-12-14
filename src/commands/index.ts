@@ -1,3 +1,5 @@
+import { Predicate } from "../storage/player-db";
+
 export class CommandInput {
 
     /** The command name. */
@@ -85,5 +87,9 @@ export class CommandFactory<TContext extends CommandContext> {
         for(let command of commands)
             if(!this.m_commands.find(cmd => cmd.name.toLowerCase() == command.name.toLowerCase()))
                 this.m_commands.push(command);
+    }
+
+    where(func: Predicate<Command<TContext>>): Command<TContext>[] {
+        return this.m_commands.filter(func);
     }
 }
