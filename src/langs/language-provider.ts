@@ -34,3 +34,6 @@ LanguageProvider.add(LanguageMap.english('Own goal by').spanish('Gol en contra d
 LanguageProvider.add(LanguageMap.english('Consecutive wins').spanish('Victorias consecutivas'));
 LanguageProvider.add(LanguageMap.english('Celebration message updated.').spanish('Mensaje de celebracion actualizado.'));
 LanguageProvider.add(LanguageMap.english('Welcome message updated.').spanish('Mensaje de bienvenida actualizado.'));
+LanguageProvider.add(LanguageMap.english('Player not found.').spanish('Jugador no encontrado.'))
+LanguageProvider.add(LanguageMap.english('Message is too short.').spanish('El mensaje es muy corto.'));
+LanguageProvider.add(LanguageMap.english('Cant whisper to yourself.').spanish('No puedes enviarte un mensaje privado a vos mismo.'));
