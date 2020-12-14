@@ -22,5 +22,7 @@ export const colors = {
     superuser: 0xffffff,
     goal: 0xffffff,
     owngoal: 0xffffff,
-    user: 0xffffff
+    user: 0xffffff,
+    outgoingMessage: 0xffffff,
+    incomingMessage: 0xffffff
 }
