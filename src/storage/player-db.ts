@@ -148,15 +148,34 @@ export class PlayerDB {
 
     /** Get the three players with the best goal score. */
     static async getTopScorers(): Promise<PlayerRecord[]> {
+        return this.topByIndex('goals')
+    }
+
+    /** Get the three players with the best assistant score. */
+    static async getTopAssistants(): Promise<PlayerRecord[]> {
+        return this.topByIndex('assists');
+    }
+
+    /** Get the three players with the best gk score. */
+    static async getTopGoalkeepers(): Promise<PlayerRecord[]> {
+        return this.topByIndex('undefeated');
+    }
+
+    /** Get the three richer players. */
+    static async getTopCash(): Promise<PlayerRecord[]> {
+        return this.topByIndex('cash');
+    }
+
+    private static topByIndex(indexName: string, maxResults: number = 3): Promise<PlayerRecord[]> {
         return new Promise<PlayerRecord[]>((resolve, reject) => {
             const store = this.db.transaction("players").objectStore("players");
-            const index = store.index("goals");
+            const index = store.index(indexName);
             const request = index.openCursor(undefined, 'prev');
             const players = [];
 
             request.onsuccess = (evt) => {
                 const cursor = request.result;
-                if(cursor && players.length < 3) {
+                if(cursor && players.length < maxResults) {
                     players.push(PlayerRecord.fromPartial(cursor.value));
                     cursor.continue();
                 } 
