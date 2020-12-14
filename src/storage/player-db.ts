@@ -1,3 +1,4 @@
+import { room } from "../room";
 import { PlayerRecord } from "./player-record";
 
 /** Represents a method that receives an object and returns a boolean. */
@@ -144,6 +145,11 @@ export class PlayerDB {
                 reject('error while opening cursor');
             };
         });
+    }
+
+    /** Returns records from the players connected. */
+    static async getRecordsConnected(): Promise<PlayerRecord[]> {
+        return await Promise.all(room.getPlayerList().map(player => PlayerDB.findByName(player.name)));
     }
 
     /** Get the three players with the best goal score. */
