@@ -18,12 +18,14 @@ import { CommandInput } from './commands'
 import { Camera } from './util/camera'
 import { Game } from './game'
 import { GameCommandManager } from './commands/game/loader'
+import { Table } from './util/table'
 
 // Room events
 
 room.onRoomLink = (url: string) => {  
     Logger.logEvent('roomlink', url, new LoggerStyles('orange'));
     GameCommandManager.load();
+    Table.loadFont();
     PlayerDB.connect("playerdb");
 
     // Game default settings

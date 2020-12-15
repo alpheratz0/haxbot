@@ -3,8 +3,7 @@ import { room } from "../room";
 import { TextMeasurer } from "./text-measurer";
 
 export class Table {
-    private static measurer = new TextMeasurer("Open Sans", 15, "https://fonts.googleapis.com/css?family=Open Sans");
-
+    private static measurer: TextMeasurer;
     private rows: Array<string[]>;
     private targetId: number;
 
@@ -15,6 +14,10 @@ export class Table {
     constructor(owner: Player, onlyOwnerView: boolean = false) {
         this.rows = [];
         this.targetId = onlyOwnerView ? owner.id : owner.admin ? undefined : owner.id;
+    }
+
+    static loadFont(): void {
+        this.measurer = new TextMeasurer("Open Sans", 15, "https://fonts.googleapis.com/css?family=Open Sans");
     }
 
     /** Set the column names of the table.
