@@ -47,4 +47,8 @@ LanguageProvider.add(LanguageMap.english('Insufficent votes.').spanish('Votos in
 LanguageProvider.add(LanguageMap.english('Banvote result').spanish('Resultado del banvote'));
 LanguageProvider.add(LanguageMap.english('Player cannot be banvoted because is playing.').spanish('El jugador no puede ser banvoteado porque esta jugando.'));
 LanguageProvider.add(LanguageMap.english('A banvote is already running.').spanish('Hay un banvote en curso aun.'));
-LanguageProvider.add(LanguageMap.english('{0} is banvoting {1}, use !yes or !no to vote.').spanish('{0} banvoteó a {1}, usa !yes o !no para votar.'))
+LanguageProvider.add(LanguageMap.english('{0} is banvoting {1}, use !yes or !no to vote.').spanish('{0} banvoteó a {1}, usa !yes o !no para votar.'));
+LanguageProvider.add(LanguageMap.english('Someone voted yes.').spanish('Alguien votó yes en el banvote.'));
+LanguageProvider.add(LanguageMap.english('Someone voted no.').spanish('Alguien votó no en el banvote.'));
+LanguageProvider.add(LanguageMap.english('There isnt a banvote running.').spanish('No hay ningun banvote en curso aun.'));
+LanguageProvider.add(LanguageMap.english('You already voted.').spanish('Ya has votado en este banvote.'));
