@@ -43,3 +43,8 @@ LanguageProvider.add(LanguageMap.english('Sent ${0} to {1}.').spanish('Enviaste 
 LanguageProvider.add(LanguageMap.english('Received ${0} from {1}.').spanish('Recibiste ${0} de {1}.'));
 LanguageProvider.add(LanguageMap.english('Wrong password.').spanish('Contraseña incorrecta.'));
 LanguageProvider.add(LanguageMap.english('Logged successfully.').spanish('Logeado exitosamente.'));
+LanguageProvider.add(LanguageMap.english('Insufficent votes.').spanish('Votos insuficientes.'));
+LanguageProvider.add(LanguageMap.english('Banvote result').spanish('Resultado del banvote'));
+LanguageProvider.add(LanguageMap.english('Player cannot be banvoted because is playing.').spanish('El jugador no puede ser banvoteado porque esta jugando.'));
+LanguageProvider.add(LanguageMap.english('A banvote is already running.').spanish('Hay un banvote en curso aun.'));
+LanguageProvider.add(LanguageMap.english('{0} is banvoting {1}, use !yes or !no to vote.').spanish('{0} banvoteó a {1}, usa !yes o !no para votar.'))

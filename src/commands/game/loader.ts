@@ -1,4 +1,5 @@
 import { GameCommandFactory } from ".";
+import { banvoteCommand } from "./user/banvote";
 import { celebrationCommand } from "./user/celebration";
 import { donateCommand } from "./user/donate";
 import { helpCommand } from "./user/help";
@@ -19,6 +20,6 @@ export class GameCommandManager {
     static load(): void {
         GameCommandFactory.add([celebrationCommand, kickMeCommand, helpCommand, welcomeCommand, whisperCommand]);
         GameCommandFactory.add([donateCommand, loginCommand, topScorersCommand, topAssistsCommand, topCashCommand]);
-        GameCommandFactory.add([topGoalkeepersCommand, rankingsCommand, statsCommand]);
+        GameCommandFactory.add([topGoalkeepersCommand, rankingsCommand, statsCommand, banvoteCommand]);
     }
 }
