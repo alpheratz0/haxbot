@@ -55,3 +55,4 @@ LanguageProvider.add(LanguageMap.english('You already voted.').spanish('Ya has v
 LanguageProvider.add(LanguageMap.english('Updated color to: ').spanish('Has cambiado tu color a: '));
 LanguageProvider.add(LanguageMap.english('Bans cleared.').spanish('Lista de bans limpiados.'));
 LanguageProvider.add(LanguageMap.english('Last team winner: ').spanish('Ultimo equipo ganador: '));
+LanguageProvider.add(LanguageMap.english('{0} silenced 3m by administrator {1}.').spanish('{1} ha silenciado por 3 minutos a {0}.'));
