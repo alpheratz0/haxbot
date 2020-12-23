@@ -54,3 +54,4 @@ LanguageProvider.add(LanguageMap.english('There isnt a banvote running.').spanis
 LanguageProvider.add(LanguageMap.english('You already voted.').spanish('Ya has votado en este banvote.'));
 LanguageProvider.add(LanguageMap.english('Updated color to: ').spanish('Has cambiado tu color a: '));
 LanguageProvider.add(LanguageMap.english('Bans cleared.').spanish('Lista de bans limpiados.'));
+LanguageProvider.add(LanguageMap.english('Last team winner: ').spanish('Ultimo equipo ganador: '));
