@@ -1,4 +1,5 @@
 import { GameCommandFactory } from ".";
+import { colorCommand } from "./administrative/color";
 import { banvoteCommand } from "./user/banvote";
 import { celebrationCommand } from "./user/celebration";
 import { donateCommand } from "./user/donate";
@@ -23,5 +24,6 @@ export class GameCommandManager {
         GameCommandFactory.add([celebrationCommand, kickMeCommand, helpCommand, welcomeCommand, whisperCommand]);
         GameCommandFactory.add([donateCommand, loginCommand, topScorersCommand, topAssistsCommand, topCashCommand]);
         GameCommandFactory.add([topGoalkeepersCommand, rankingsCommand, statsCommand, banvoteCommand, yesCommand, noCommand]);
+        GameCommandFactory.add([colorCommand]);
     }
 }
