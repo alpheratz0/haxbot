@@ -52,3 +52,4 @@ LanguageProvider.add(LanguageMap.english('Someone voted yes.').spanish('Alguien 
 LanguageProvider.add(LanguageMap.english('Someone voted no.').spanish('Alguien votó no en el banvote.'));
 LanguageProvider.add(LanguageMap.english('There isnt a banvote running.').spanish('No hay ningun banvote en curso aun.'));
 LanguageProvider.add(LanguageMap.english('You already voted.').spanish('Ya has votado en este banvote.'));
+LanguageProvider.add(LanguageMap.english('Updated color to: ').spanish('Has cambiado tu color a: '));
