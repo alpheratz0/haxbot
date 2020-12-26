@@ -56,3 +56,5 @@ LanguageProvider.add(LanguageMap.english('Updated color to: ').spanish('Has camb
 LanguageProvider.add(LanguageMap.english('Bans cleared.').spanish('Lista de bans limpiados.'));
 LanguageProvider.add(LanguageMap.english('Last team winner: ').spanish('Ultimo equipo ganador: '));
 LanguageProvider.add(LanguageMap.english('{0} silenced 3m by administrator {1}.').spanish('{1} ha silenciado por 3 minutos a {0}.'));
+LanguageProvider.add(LanguageMap.english('Cant swap while playing.').spanish('No puedes intercambiar los jugadores mientras se juega.'));
+LanguageProvider.add(LanguageMap.english('Teams swapped.').spanish('Equipos intercambiados.'));
