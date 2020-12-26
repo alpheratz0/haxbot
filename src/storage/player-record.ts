@@ -48,4 +48,8 @@ export class PlayerRecord {
     mute(minutes: number): void {
         this.mutedUntil = Date.now() + (1000 * 60 * minutes);
     }
+
+    unmute(): void {
+        this.mutedUntil = 0;
+    }
 }
