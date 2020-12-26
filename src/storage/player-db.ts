@@ -65,6 +65,14 @@ export class PlayerDB {
         });
     }
     
+    /**
+     * Updates all the specified players with the new values.
+     * @param players The players updated.
+     */
+    static async updateAll(players: PlayerRecord[]): Promise<void> {
+        await Promise.all(players.map(player => PlayerDB.update(player)));
+    }
+
     /** Returns the player with the specified auth.
      * @param auth The player's auth.
      */
