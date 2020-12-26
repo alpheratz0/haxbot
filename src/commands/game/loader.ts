@@ -28,9 +28,13 @@ export class GameCommandManager {
 
     /** Loads all commands. */
     static load(): void {
+        
+        /* User commands */
         GameCommandFactory.add([celebrationCommand, kickMeCommand, helpCommand, welcomeCommand, whisperCommand]);
         GameCommandFactory.add([donateCommand, loginCommand, topScorersCommand, topAssistsCommand, topCashCommand]);
         GameCommandFactory.add([topGoalkeepersCommand, rankingsCommand, statsCommand, banvoteCommand, yesCommand, noCommand]);
+
+        /* Administrative commands */
         GameCommandFactory.add([colorCommand, clearBansCommand, winnerCommand, muteCommand, notifyCommand]);
         GameCommandFactory.add([swapCommand, setAvatarCommand, unmuteCommand]);
     }
