@@ -35,6 +35,7 @@ Commands that only admins and superusers can execute
 - notify `message`:**`string`**
 - swap
 - winner
+- setavatar `id`:**`number`** `avatar?`:**`string`**
 
 ## Credits
 
