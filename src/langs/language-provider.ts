@@ -58,3 +58,5 @@ LanguageProvider.add(LanguageMap.english('Last team winner: ').spanish('Ultimo e
 LanguageProvider.add(LanguageMap.english('{0} silenced 3m by administrator {1}.').spanish('{1} ha silenciado por 3 minutos a {0}.'));
 LanguageProvider.add(LanguageMap.english('Cant swap while playing.').spanish('No puedes intercambiar los jugadores mientras se juega.'));
 LanguageProvider.add(LanguageMap.english('Teams swapped.').spanish('Equipos intercambiados.'));
+LanguageProvider.add(LanguageMap.english('{0} avatar updated to {1}.').spanish('Has cambiado el avatar de {0} a {1}.'));
+LanguageProvider.add(LanguageMap.english('{0} avatar cleared.').spanish('Has borrado el avatar de {0}.'));
