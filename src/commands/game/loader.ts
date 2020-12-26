@@ -5,6 +5,7 @@ import { muteCommand } from "./administrative/mute";
 import { notifyCommand } from "./administrative/notify";
 import { setAvatarCommand } from "./administrative/setavatar";
 import { swapCommand } from "./administrative/swap";
+import { unmuteCommand } from "./administrative/unmute";
 import { winnerCommand } from "./administrative/winner";
 import { banvoteCommand } from "./user/banvote";
 import { celebrationCommand } from "./user/celebration";
@@ -31,6 +32,6 @@ export class GameCommandManager {
         GameCommandFactory.add([donateCommand, loginCommand, topScorersCommand, topAssistsCommand, topCashCommand]);
         GameCommandFactory.add([topGoalkeepersCommand, rankingsCommand, statsCommand, banvoteCommand, yesCommand, noCommand]);
         GameCommandFactory.add([colorCommand, clearBansCommand, winnerCommand, muteCommand, notifyCommand]);
-        GameCommandFactory.add([swapCommand, setAvatarCommand]);
+        GameCommandFactory.add([swapCommand, setAvatarCommand, unmuteCommand]);
     }
 }

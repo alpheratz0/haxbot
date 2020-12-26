@@ -60,3 +60,5 @@ LanguageProvider.add(LanguageMap.english('Cant swap while playing.').spanish('No
 LanguageProvider.add(LanguageMap.english('Teams swapped.').spanish('Equipos intercambiados.'));
 LanguageProvider.add(LanguageMap.english('{0} avatar updated to {1}.').spanish('Has cambiado el avatar de {0} a {1}.'));
 LanguageProvider.add(LanguageMap.english('{0} avatar cleared.').spanish('Has borrado el avatar de {0}.'));
+LanguageProvider.add(LanguageMap.english('{0} removed your silence penalty.').spanish('{0} te quitó el silencio.'));
+LanguageProvider.add(LanguageMap.english('{0} isnt silenced.').spanish('{0} no se encuentra silenciado.'));
