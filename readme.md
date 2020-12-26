@@ -34,6 +34,7 @@ Commands that only admins and superusers can execute
 - mute `id`:**`number`**
 - notify `message`:**`string`**
 - swap
+- unmute `id`:**`number`**
 - winner
 - setavatar `id`:**`number`** `avatar?`:**`string`**
 
