@@ -3,6 +3,7 @@ import { clearBansCommand } from "./administrative/clear-bans";
 import { colorCommand } from "./administrative/color";
 import { muteCommand } from "./administrative/mute";
 import { notifyCommand } from "./administrative/notify";
+import { rainbowCommand } from "./administrative/rainbow";
 import { setAvatarCommand } from "./administrative/setavatar";
 import { swapCommand } from "./administrative/swap";
 import { unmuteCommand } from "./administrative/unmute";
@@ -37,6 +38,6 @@ export class GameCommandManager {
 
         /* Administrative commands */
         GameCommandFactory.add([colorCommand, clearBansCommand, winnerCommand, muteCommand, notifyCommand]);
-        GameCommandFactory.add([swapCommand, setAvatarCommand, unmuteCommand, unmuteAllCommand]);
+        GameCommandFactory.add([swapCommand, setAvatarCommand, unmuteCommand, unmuteAllCommand, rainbowCommand]);
     }
 }

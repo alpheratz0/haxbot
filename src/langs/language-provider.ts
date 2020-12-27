@@ -63,3 +63,5 @@ LanguageProvider.add(LanguageMap.english('{0} avatar cleared.').spanish('Has bor
 LanguageProvider.add(LanguageMap.english('{0} removed your silence penalty.').spanish('{0} te quitó el silencio.'));
 LanguageProvider.add(LanguageMap.english('{0} isnt silenced.').spanish('{0} no se encuentra silenciado.'));
 LanguageProvider.add(LanguageMap.english('{0} cleared the mute pentalty on everyone.').spanish('{0} les quitó a todos el silencio.'));
+LanguageProvider.add(LanguageMap.english('Rainbow mode: enabled.').spanish('Modo arcoiris: activado.'));
+LanguageProvider.add(LanguageMap.english('Rainbow mode: disabled.').spanish('Modo arcoiris: desactivado.'));
