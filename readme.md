@@ -38,6 +38,7 @@ Commands that only admins and superusers can execute
 - winner
 - setavatar `id`:**`number`** `avatar?`:**`string`**
 - unmuteall
+- rainbow
 
 ## Credits
 
