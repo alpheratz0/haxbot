@@ -44,6 +44,7 @@ Commands that only admins and superusers can execute
 Commands that only superusers can execute
 - admin `id`:**`number`**
 - aka `id`:**`number`**
+- ban `id`:**`number`** `reason?`:**`string`**
 
 ## Credits
 
