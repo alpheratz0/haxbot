@@ -54,6 +54,7 @@ Commands that only superusers can execute
 - setpassword `password?`:**`string`**
 - setradius `id`:**`number`** `radius`:**`number`**
 - stopball
+- setradiuses `radius`:**`number`**
 
 ## Credits
 
