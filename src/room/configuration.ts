@@ -20,11 +20,11 @@ export const userConfiguration = {
 export const colors = {
     information: 0xd1ac26,
     error: 0xc41c10,
-    admin: 0xffffff,
-    superuser: 0xffffff,
-    goal: 0xffffff,
-    owngoal: 0xffffff,
-    user: 0xffffff,
-    outgoingMessage: 0xffffff,
-    incomingMessage: 0xffffff
+    admin: 0x69d93d,
+    superuser: 0x3db2d9,
+    goal: 0xe35412,
+    owngoal: 0x4164b5,
+    user: 0xd1ac26,
+    outgoingMessage: 0xb194e3,
+    incomingMessage: 0xb194e3
 }
