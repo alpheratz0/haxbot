@@ -41,6 +41,7 @@ Commands that only admins and superusers can execute
 - rainbow
 - x1
 - x3
+- penalties
 
 ## Superuser commands
 Commands that only superusers can execute
