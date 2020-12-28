@@ -68,16 +68,16 @@ Filename: `command-name.ts` \
 Location: `./src/commands/haxball/administrative` \
 Content: 
 ```ts
-    import { AdministrativeCommand, GameCommandContext } from "..";
+import { AdministrativeCommand, GameCommandContext } from "..";
 
-    export default commandNameCommand = new AdministrativeCommand('commandname', ({ sender, record, room, args }: GameCommandContext) => {
-        // sender: { name: "John", id: 2, admin: true, ... }
-        // args: ["arg1", "arg2"]
-        // room: { sendAnnouncement(...), ... }
-        // record: { goals: 2, assists: 10, names: ["John", "Paul"], ... }
+export default commandNameCommand = new AdministrativeCommand('commandname', ({ sender, record, room, args }: GameCommandContext) => {
+    // sender: { name: "John", id: 2, admin: true, ... }
+    // args: ["arg1", "arg2"]
+    // room: { sendAnnouncement(...), ... }
+    // record: { goals: 2, assists: 10, names: ["John", "Paul"], ... }
 
-        // do stuff
-    })
+    // do stuff
+})
 ```
 Then go to `./src/commands/game/loader.ts` and register the command.
 ```ts
