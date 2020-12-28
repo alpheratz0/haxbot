@@ -78,7 +78,7 @@ export class PlayerRecord {
         this.cash = 0;
         this.scoreMessage = null;
         this.welcomeMessage = null;
-        this.color = null;
+        this.color = 0xffffff;
         this.names = [this.name];
     }
 }
