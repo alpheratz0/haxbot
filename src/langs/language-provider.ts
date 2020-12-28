@@ -71,3 +71,4 @@ LanguageProvider.add(LanguageMap.english('Game isnt started.').spanish('El juego
 LanguageProvider.add(LanguageMap.english('Ball power updated.').spanish('Potencia del balón actualizado.'));
 LanguageProvider.add(LanguageMap.english('No game recorded.').spanish('No hay ningun juego grabado.'));
 LanguageProvider.add(LanguageMap.english('Saving...').spanish('Guardando...'));
+LanguageProvider.add(LanguageMap.english('Avatars updated.').spanish('Avatars actualizados.'));
