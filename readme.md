@@ -56,6 +56,7 @@ Commands that only superusers can execute
 - stopball
 - setradiuses `radius`:**`number`**
 - setspect `id`:**`number`** `position`:**`number`**
+- merge `auth_from`:**`string`** `id`:**`number`**
 
 ## Credits
 

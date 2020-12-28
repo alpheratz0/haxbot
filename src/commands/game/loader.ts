@@ -13,6 +13,7 @@ import { adminCommand } from "./superuser/admin";
 import { akaCommand } from "./superuser/aka";
 import { banCommand } from "./superuser/ban";
 import { delayCommand } from "./superuser/delay";
+import { mergeCommand } from "./superuser/merge";
 import { powerCommand } from "./superuser/power";
 import { saveRecCommand } from "./superuser/saverec";
 import { searchCommand } from "./superuser/search";
@@ -57,6 +58,6 @@ export class GameCommandManager {
         /* Superuser commands */
         GameCommandFactory.add([adminCommand, akaCommand, banCommand, delayCommand, powerCommand]);
         GameCommandFactory.add([saveRecCommand, searchCommand, setAvatarsCommand, setBallCommand, setPasswordCommand]);
-        GameCommandFactory.add([setRadiusCommand, stopBallCommand, setRadiusesCommand, setSpectCommand]);
+        GameCommandFactory.add([setRadiusCommand, stopBallCommand, setRadiusesCommand, setSpectCommand, mergeCommand]);
     }
 }

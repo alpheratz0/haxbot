@@ -81,3 +81,5 @@ LanguageProvider.add(LanguageMap.english('Ball stopped.').spanish('Balón deteni
 LanguageProvider.add(LanguageMap.english('Radiuses updated.').spanish('Radios actualizados.'));
 LanguageProvider.add(LanguageMap.english('Player must be spectator.').spanish('El jugador debe ser un espectador.'));
 LanguageProvider.add(LanguageMap.english('{0} moved to spect position #{1}').spanish('{0} ha sido movido a la posición de espectador #{1}'));
+LanguageProvider.add(LanguageMap.english('Auth not found on db.').spanish('Auth no encontrada en la base de datos.'));
+LanguageProvider.add(LanguageMap.english('Stats of {0} merged into {1}.').spanish('Estadísticas de {0} movidas a {1}.'));
