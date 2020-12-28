@@ -65,7 +65,7 @@ Commands that only superusers can execute
 First go to the corresponding folder of the commands, and create a new file, if the command is an user command use the `UserCommand` class, if the command is an administrative command use `AdministrativeCommand` class and if the command is a superuser command use the `SuperUserCommand` class.
 
 Filename: `command-name.ts` \
-Location: `./src/commands/haxball/administrative` \
+Location: `./src/commands/game/administrative` \
 Content: 
 ```ts
 import { AdministrativeCommand, GameCommandContext } from "..";
