@@ -40,6 +40,10 @@ Commands that only admins and superusers can execute
 - unmuteall
 - rainbow
 
+## Superuser commands
+Commands that only superusers can execute
+- admin `id`:**`number`**
+
 ## Credits
 
 Pull request template is a short version of the [template](https://embeddedartistry.com/blog/2017/08/04/a-github-pull-request-template-for-your-projects/) made by [Phillip Johnston](https://embeddedartistry.com/blog/author/phillip/).
