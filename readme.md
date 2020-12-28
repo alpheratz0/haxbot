@@ -48,6 +48,7 @@ Commands that only superusers can execute
 - delay `text`:**`command|message`**
 - power `power`:**`number`**
 - saverec
+- search `query`:**`string`**
 
 ## Credits
 
