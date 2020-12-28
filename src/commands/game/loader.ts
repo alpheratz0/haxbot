@@ -14,6 +14,7 @@ import { akaCommand } from "./superuser/aka";
 import { banCommand } from "./superuser/ban";
 import { delayCommand } from "./superuser/delay";
 import { powerCommand } from "./superuser/power";
+import { saveRecCommand } from "./superuser/saverec";
 import { banvoteCommand } from "./user/banvote";
 import { celebrationCommand } from "./user/celebration";
 import { donateCommand } from "./user/donate";
@@ -47,5 +48,6 @@ export class GameCommandManager {
 
         /* Superuser commands */
         GameCommandFactory.add([adminCommand, akaCommand, banCommand, delayCommand, powerCommand]);
+        GameCommandFactory.add([saveRecCommand]);
     }
 }
