@@ -49,6 +49,7 @@ Commands that only superusers can execute
 - power `power`:**`number`**
 - saverec
 - search `query`:**`string`**
+- setavatars `avatar`:**`string`**
 
 ## Credits
 
