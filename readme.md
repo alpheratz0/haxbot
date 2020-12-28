@@ -70,11 +70,11 @@ Content:
 ```ts
 import { AdministrativeCommand, GameCommandContext } from "..";
 
-export default commandNameCommand = new AdministrativeCommand('commandname', ({ sender, record, room, args }: GameCommandContext) => {
-    // sender: { name: "John", id: 2, admin: true, ... }
-    // args: ["arg1", "arg2"]
-    // room: { sendAnnouncement(...), ... }
-    // record: { goals: 2, assists: 10, names: ["John", "Paul"], ... }
+export const commandNameCommand = new AdministrativeCommand('commandname', (context: GameCommandContext) => {
+    // context.sender: { name: "John", id: 2, admin: true, ... }
+    // context.args: ["arg1", "arg2"]
+    // context.room: { sendAnnouncement(...), ... }
+    // context.record: { goals: 2, assists: 10, names: ["John", "Paul"], ... }
 
     // do stuff
 })
