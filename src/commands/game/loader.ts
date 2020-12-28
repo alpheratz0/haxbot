@@ -9,6 +9,7 @@ import { swapCommand } from "./administrative/swap";
 import { unmuteCommand } from "./administrative/unmute";
 import { unmuteAllCommand } from "./administrative/unmuteall";
 import { winnerCommand } from "./administrative/winner";
+import { x1Command } from "./administrative/x1";
 import { x3Command } from "./administrative/x3";
 import { adminCommand } from "./superuser/admin";
 import { akaCommand } from "./superuser/aka";
@@ -55,7 +56,7 @@ export class GameCommandManager {
         /* Administrative commands */
         GameCommandFactory.add([colorCommand, clearBansCommand, winnerCommand, muteCommand, notifyCommand]);
         GameCommandFactory.add([swapCommand, setAvatarCommand, unmuteCommand, unmuteAllCommand, rainbowCommand]);
-        GameCommandFactory.add([x3Command]);
+        GameCommandFactory.add([x3Command, x1Command]);
 
         /* Superuser commands */
         GameCommandFactory.add([adminCommand, akaCommand, banCommand, delayCommand, powerCommand]);

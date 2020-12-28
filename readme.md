@@ -39,6 +39,7 @@ Commands that only admins and superusers can execute
 - setavatar `id`:**`number`** `avatar?`:**`string`**
 - unmuteall
 - rainbow
+- x1
 
 ## Superuser commands
 Commands that only superusers can execute
