@@ -50,6 +50,7 @@ Commands that only superusers can execute
 - saverec
 - search `query`:**`string`**
 - setavatars `avatar`:**`string`**
+- setball `x`:**`number`** `y`:**`number`**
 
 ## Credits
 

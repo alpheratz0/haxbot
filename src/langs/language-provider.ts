@@ -72,3 +72,4 @@ LanguageProvider.add(LanguageMap.english('Ball power updated.').spanish('Potenci
 LanguageProvider.add(LanguageMap.english('No game recorded.').spanish('No hay ningun juego grabado.'));
 LanguageProvider.add(LanguageMap.english('Saving...').spanish('Guardando...'));
 LanguageProvider.add(LanguageMap.english('Avatars updated.').spanish('Avatars actualizados.'));
+LanguageProvider.add(LanguageMap.english('Ball position updated.').spanish('Posición de la pelota actualizada.'));
