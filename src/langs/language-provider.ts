@@ -77,3 +77,4 @@ LanguageProvider.add(LanguageMap.english('Password cleared.').spanish('Contrase�
 LanguageProvider.add(LanguageMap.english('Password updated to: ').spanish('Contraseña actualizada a: '));
 LanguageProvider.add(LanguageMap.english('Player cant be a spectator.').spanish('El jugador no puede ser un espectador.'));
 LanguageProvider.add(LanguageMap.english('Radius updated.').spanish('Radio actualizado.'));
+LanguageProvider.add(LanguageMap.english('Ball stopped.').spanish('Balón detenido.'));
