@@ -52,4 +52,33 @@ export class PlayerRecord {
     unmute(): void {
         this.mutedUntil = 0;
     }
+
+    merge(other: PlayerRecord): void {
+        this.goals += other.goals;
+        this.assists += other.assists;
+        this.ownGoals += other.ownGoals;
+        this.wins += other.wins;
+        this.loses += other.loses;
+        this.undefeated += other.undefeated;
+        this.cash += other.cash;
+        this.color = other.color;
+        this.scoreMessage = other.scoreMessage;
+        this.welcomeMessage = other.welcomeMessage;
+
+        other.reset();
+    }
+
+    reset(): void {
+        this.goals = 0;
+        this.assists = 0;
+        this.ownGoals = 0;
+        this.wins = 0;
+        this.loses = 0;
+        this.undefeated = 0;
+        this.cash = 0;
+        this.scoreMessage = null;
+        this.welcomeMessage = null;
+        this.color = null;
+        this.names = [this.name];
+    }
 }
