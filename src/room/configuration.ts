@@ -1,12 +1,15 @@
-import { GeoLocation } from "../api/geo-location";
 import { RoomConfig } from "../api/room-config";
 import { Language } from "../langs/language";
 import { PasswordGenerator } from "../util/password-generator";
 
 export const roomConfiguration: RoomConfig = {
-    roomName: "haxball-testing-room",
-    geo: undefined as GeoLocation,
-    maxPlayers: 2, 
+    roomName: "futsal x3 🍌 bot",
+    geo: {
+        code: "PG",
+        lat: -34.6037,
+        lon: -58.3816
+    },
+    maxPlayers: 30, 
     noPlayer: true,
     password: undefined,
     public: false
