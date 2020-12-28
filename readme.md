@@ -10,56 +10,56 @@ Here is the list of available commands for now
 
 ## User commands
 Commands that every `player` on the room can execute.
-- help
-- banvote `id`:**`number`**
-- celebration `message`:**`string`**
-- donate `id`:**`number`** `ammount`:**`number`**
-- topgks
-- login `password`:**`string`**
-- rankings
-- topassists
-- stats `id?`:**`number`**
-- no
-- kickme `reason?`:**`string`**
-- yes
-- w `id`:**`number`** `message`:**`string`**
-- welcome `message`:**`string`**
-- topcash
-- topscorers
+- !help
+- !banvote `id`
+- !celebration `message`
+- !donate `id` `ammount`
+- !topgks
+- !login `password`
+- !rankings
+- !topassists
+- !stats `id?`
+- !no
+- !kickme `reason?`
+- !yes
+- !w `id` `message`
+- !welcome `message`
+- !topcash
+- !topscorers
 
 ## Administrative commands
 Commands that only admins and superusers can execute
-- clearbans
-- color
-- mute `id`:**`number`**
-- notify `message`:**`string`**
-- swap
-- unmute `id`:**`number`**
-- winner
-- setavatar `id`:**`number`** `avatar?`:**`string`**
-- unmuteall
-- rainbow
-- x1
-- x3
-- penalties
+- !clearbans
+- !color
+- !mute `id`
+- !notify `message`
+- !swap
+- !unmute `id`
+- !winner
+- !setavatar `id` `avatar?`
+- !unmuteall
+- !rainbow
+- !x1
+- !x3
+- !penalties
 
 ## Superuser commands
 Commands that only superusers can execute
-- admin `id`:**`number`**
-- aka `id`:**`number`**
-- ban `id`:**`number`** `reason?`:**`string`**
-- delay `text`:**`command|message`**
-- power `power`:**`number`**
-- saverec
-- search `query`:**`string`**
-- setavatars `avatar`:**`string`**
-- setball `x`:**`number`** `y`:**`number`**
-- setpassword `password?`:**`string`**
-- setradius `id`:**`number`** `radius`:**`number`**
-- stopball
-- setradiuses `radius`:**`number`**
-- setspect `id`:**`number`** `position`:**`number`**
-- merge `auth_from`:**`string`** `id`:**`number`**
+- !admin `id`
+- !aka `id`
+- !ban `id` `reason?`
+- !delay `text`
+- !power `power`
+- !saverec
+- !search `query`
+- !setavatars `avatar`
+- !setball `x` `y`
+- !setpassword `password?`
+- !setradius `id` `radius`
+- !stopball
+- !setradiuses `radius`
+- !setspect `id` `position`
+- !merge `auth_from` `id`
 
 ## Creating a new command
 First go to the corresponding folder of the commands, and create a new file, if the command is an user command use the `UserCommand` class, if the command is an administrative command use `AdministrativeCommand` class and if the command is a superuser command use the `SuperUserCommand` class.
