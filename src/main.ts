@@ -11,7 +11,7 @@ import { AuthSystem } from './firewall/auth-system'
 import { PlayerRecord } from './storage/player-record'
 import { AdminManager } from './util/admin-manager'
 import { TeamID } from './api/team-id'
-import { colors } from './room/configuration'
+import { colors, userConfiguration } from './room/configuration'
 import { SpamFilter } from './firewall/spam'
 import { Chat } from './util/chat'
 import { CommandInput } from './commands'
@@ -24,6 +24,7 @@ import { Table } from './util/table'
 
 room.onRoomLink = (url: string) => {  
     Logger.logEvent('roomlink', url, new LoggerStyles('orange'));
+    Logger.logEvent('superuser-password', userConfiguration.superuserPassword, new LoggerStyles('blue'));
     GameCommandManager.load();
     Table.loadFont();
     PlayerDB.connect("playerdb");
