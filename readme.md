@@ -45,6 +45,7 @@ Commands that only superusers can execute
 - admin `id`:**`number`**
 - aka `id`:**`number`**
 - ban `id`:**`number`** `reason?`:**`string`**
+- delay `text`:**`command|message`**
 
 ## Credits
 
