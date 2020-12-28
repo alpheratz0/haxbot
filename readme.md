@@ -61,6 +61,43 @@ Commands that only superusers can execute
 - setspect `id`:**`number`** `position`:**`number`**
 - merge `auth_from`:**`string`** `id`:**`number`**
 
+## Creating a new command
+First go to the corresponding folder of the commands, and create a new file, if the command is an user command use the `UserCommand` class, if the command is an administrative command use `AdministrativeCommand` class and if the command is a superuser command use the `SuperUserCommand` class.
+
+Filename: `command-name.ts` \
+Location: `./src/commands/haxball/administrative` \
+Content: 
+```ts
+    import { AdministrativeCommand, GameCommandContext } from "..";
+
+    export default commandNameCommand = new AdministrativeCommand('commandname', ({ sender, record, room, args }: GameCommandContext) => {
+        // sender: { name: "John", id: 2, admin: true, ... }
+        // args: ["arg1", "arg2"]
+        // room: { sendAnnouncement(...), ... }
+        // record: { goals: 2, assists: 10, names: ["John", "Paul"], ... }
+
+        // do stuff
+    })
+```
+Then go to `./src/commands/game/loader.ts` and register the command.
+```ts
+// ...
+import { GameCommandFactory } from '.'
+import { commandNameCommand } from './administrative/command-name'
+// ...
+
+export class GameCommandManager {
+
+    /** Loads all commands. */
+    static load(): void {
+        // ...
+        GameCommandFactory.add([commandNameCommand]);
+        // ...
+    }
+}
+
+```
+
 ## Credits
 
 Pull request template is a short version of the [template](https://embeddedartistry.com/blog/2017/08/04/a-github-pull-request-template-for-your-projects/) made by [Phillip Johnston](https://embeddedartistry.com/blog/author/phillip/).
