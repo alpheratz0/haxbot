@@ -43,6 +43,7 @@ Commands that only admins and superusers can execute
 ## Superuser commands
 Commands that only superusers can execute
 - admin `id`:**`number`**
+- aka `id`:**`number`**
 
 ## Credits
 
