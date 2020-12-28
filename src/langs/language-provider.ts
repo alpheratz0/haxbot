@@ -79,3 +79,5 @@ LanguageProvider.add(LanguageMap.english('Player cant be a spectator.').spanish(
 LanguageProvider.add(LanguageMap.english('Radius updated.').spanish('Radio actualizado.'));
 LanguageProvider.add(LanguageMap.english('Ball stopped.').spanish('Balón detenido.'));
 LanguageProvider.add(LanguageMap.english('Radiuses updated.').spanish('Radios actualizados.'));
+LanguageProvider.add(LanguageMap.english('Player must be spectator.').spanish('El jugador debe ser un espectador.'));
+LanguageProvider.add(LanguageMap.english('{0} moved to spect position #{1}').spanish('{0} ha sido movido a la posición de espectador #{1}'));

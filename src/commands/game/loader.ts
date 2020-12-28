@@ -21,6 +21,7 @@ import { setBallCommand } from "./superuser/setball";
 import { setPasswordCommand } from "./superuser/setpassword";
 import { setRadiusCommand } from "./superuser/setradius";
 import { setRadiusesCommand } from "./superuser/setradiuses";
+import { setSpectCommand } from "./superuser/setspect";
 import { stopBallCommand } from "./superuser/stopball";
 import { banvoteCommand } from "./user/banvote";
 import { celebrationCommand } from "./user/celebration";
@@ -56,6 +57,6 @@ export class GameCommandManager {
         /* Superuser commands */
         GameCommandFactory.add([adminCommand, akaCommand, banCommand, delayCommand, powerCommand]);
         GameCommandFactory.add([saveRecCommand, searchCommand, setAvatarsCommand, setBallCommand, setPasswordCommand]);
-        GameCommandFactory.add([setRadiusCommand, stopBallCommand, setRadiusesCommand]);
+        GameCommandFactory.add([setRadiusCommand, stopBallCommand, setRadiusesCommand, setSpectCommand]);
     }
 }

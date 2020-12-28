@@ -55,6 +55,7 @@ Commands that only superusers can execute
 - setradius `id`:**`number`** `radius`:**`number`**
 - stopball
 - setradiuses `radius`:**`number`**
+- setspect `id`:**`number`** `position`:**`number`**
 
 ## Credits
 
