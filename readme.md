@@ -40,6 +40,7 @@ Commands that only admins and superusers can execute
 - unmuteall
 - rainbow
 - x1
+- x3
 
 ## Superuser commands
 Commands that only superusers can execute
