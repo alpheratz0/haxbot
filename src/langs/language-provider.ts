@@ -66,3 +66,6 @@ LanguageProvider.add(LanguageMap.english('{0} cleared the mute pentalty on every
 LanguageProvider.add(LanguageMap.english('Rainbow mode: enabled.').spanish('Modo arcoiris: activado.'));
 LanguageProvider.add(LanguageMap.english('Rainbow mode: disabled.').spanish('Modo arcoiris: desactivado.'));
 LanguageProvider.add(LanguageMap.english('Delaying: ').spanish('Retrasando: '));
+LanguageProvider.add(LanguageMap.english('You cant be a spectator.').spanish('No puedes ser un espectador.'));
+LanguageProvider.add(LanguageMap.english('Game isnt started.').spanish('El juego no esta iniciado.'));
+LanguageProvider.add(LanguageMap.english('Ball power updated.').spanish('Potencia del balón actualizado.'));

@@ -13,6 +13,7 @@ import { adminCommand } from "./superuser/admin";
 import { akaCommand } from "./superuser/aka";
 import { banCommand } from "./superuser/ban";
 import { delayCommand } from "./superuser/delay";
+import { powerCommand } from "./superuser/power";
 import { banvoteCommand } from "./user/banvote";
 import { celebrationCommand } from "./user/celebration";
 import { donateCommand } from "./user/donate";
@@ -45,6 +46,6 @@ export class GameCommandManager {
         GameCommandFactory.add([swapCommand, setAvatarCommand, unmuteCommand, unmuteAllCommand, rainbowCommand]);
 
         /* Superuser commands */
-        GameCommandFactory.add([adminCommand, akaCommand, banCommand, delayCommand]);
+        GameCommandFactory.add([adminCommand, akaCommand, banCommand, delayCommand, powerCommand]);
     }
 }
