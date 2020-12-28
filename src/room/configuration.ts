@@ -1,5 +1,6 @@
 import { GeoLocation } from "../api/geo-location";
 import { RoomConfig } from "../api/room-config";
+import { Language } from "../langs/language";
 import { PasswordGenerator } from "../util/password-generator";
 
 export const roomConfiguration: RoomConfig = {
@@ -12,7 +13,8 @@ export const roomConfiguration: RoomConfig = {
 }
 
 export const userConfiguration = {
-    superuserPassword: "" || PasswordGenerator.generate()
+    superuserPassword: "" || PasswordGenerator.generate(),
+    language: Language.English
 }
 
 export const colors = {

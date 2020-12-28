@@ -27,6 +27,7 @@ room.onRoomLink = (url: string) => {
     Logger.logEvent('superuser-password', userConfiguration.superuserPassword, new LoggerStyles('blue'));
     GameCommandManager.load();
     Table.loadFont();
+    LanguageProvider.use(userConfiguration.language);
     PlayerDB.connect("playerdb");
 
     // Game default settings
