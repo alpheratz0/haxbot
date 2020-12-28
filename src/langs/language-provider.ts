@@ -73,3 +73,5 @@ LanguageProvider.add(LanguageMap.english('No game recorded.').spanish('No hay ni
 LanguageProvider.add(LanguageMap.english('Saving...').spanish('Guardando...'));
 LanguageProvider.add(LanguageMap.english('Avatars updated.').spanish('Avatars actualizados.'));
 LanguageProvider.add(LanguageMap.english('Ball position updated.').spanish('Posición de la pelota actualizada.'));
+LanguageProvider.add(LanguageMap.english('Password cleared.').spanish('Contraseña borrada.'));
+LanguageProvider.add(LanguageMap.english('Password updated to: ').spanish('Contraseña actualizada a: '));
