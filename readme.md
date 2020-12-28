@@ -52,6 +52,7 @@ Commands that only superusers can execute
 - setavatars `avatar`:**`string`**
 - setball `x`:**`number`** `y`:**`number`**
 - setpassword `password?`:**`string`**
+- setradius `id`:**`number`** `radius`:**`number`**
 
 ## Credits
 

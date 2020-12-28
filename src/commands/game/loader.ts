@@ -19,6 +19,7 @@ import { searchCommand } from "./superuser/search";
 import { setAvatarsCommand } from "./superuser/setavatars";
 import { setBallCommand } from "./superuser/setball";
 import { setPasswordCommand } from "./superuser/setpassword";
+import { setRadiusCommand } from "./superuser/setradius";
 import { banvoteCommand } from "./user/banvote";
 import { celebrationCommand } from "./user/celebration";
 import { donateCommand } from "./user/donate";
@@ -53,5 +54,6 @@ export class GameCommandManager {
         /* Superuser commands */
         GameCommandFactory.add([adminCommand, akaCommand, banCommand, delayCommand, powerCommand]);
         GameCommandFactory.add([saveRecCommand, searchCommand, setAvatarsCommand, setBallCommand, setPasswordCommand]);
+        GameCommandFactory.add([setRadiusCommand]);
     }
 }

@@ -75,3 +75,5 @@ LanguageProvider.add(LanguageMap.english('Avatars updated.').spanish('Avatars ac
 LanguageProvider.add(LanguageMap.english('Ball position updated.').spanish('Posición de la pelota actualizada.'));
 LanguageProvider.add(LanguageMap.english('Password cleared.').spanish('Contraseña borrada.'));
 LanguageProvider.add(LanguageMap.english('Password updated to: ').spanish('Contraseña actualizada a: '));
+LanguageProvider.add(LanguageMap.english('Player cant be a spectator.').spanish('El jugador no puede ser un espectador.'));
+LanguageProvider.add(LanguageMap.english('Radius updated.').spanish('Radio actualizado.'));
