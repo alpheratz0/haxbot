@@ -230,5 +230,6 @@ export interface Room {
 declare global {
     interface Window {
         HBInit: (roomConfig: RoomConfig) => Room;
+        room: Room;
     }
 }
