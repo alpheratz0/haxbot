@@ -83,7 +83,7 @@ room.onStadiumChange = async (newStadiumName: string, byPlayer: Player) => {
     Logger.logEvent('stadiumchange', newStadiumName, new LoggerStyles('blue'));
     
     if(byPlayer && !(await PlayerDB.findByName(byPlayer.name)).isSuperUser) {
-        room.sendAnnouncement(LanguageProvider.get('Use !futsal3 !futsal1 or !futsalpen to change the map.'), byPlayer.id, colors.error);
+        room.sendAnnouncement(LanguageProvider.get('Use !x3 !x1 or !penalties to change the map.'), byPlayer.id, colors.error);
         room.setCustomStadium(Futsalx3);
     }
 }

@@ -23,7 +23,7 @@ LanguageProvider.add(LanguageMap.english('Multiple connections from the same com
 LanguageProvider.add(LanguageMap.english('Welcome to the futsal bot, use !help to see commands.').spanish('Bienvenido al bot de futsal, usa !help para ver los comandos.'));
 LanguageProvider.add(LanguageMap.english('Name taken.').spanish('Nombre tomado.'));
 LanguageProvider.add(LanguageMap.english('Invalid name.').spanish('Nombre invalido.'));
-LanguageProvider.add(LanguageMap.english('Use !futsal3 !futsal1 or !futsalpen to change the map.').spanish('Usa !futsal3 !futsal1 o !futsalpen para cambiar el mapa'));
+LanguageProvider.add(LanguageMap.english('Use !x3 !x1 or !penalties to change the map.').spanish('Usa !x3 !x1 ó !penalties para cambiar el mapa.'));
 LanguageProvider.add(LanguageMap.english('You cant ban that player.').spanish('No puedes banear a ese jugador.'));
 LanguageProvider.add(LanguageMap.english('Spamming the room is forbidden.').spanish('Esta prohibido el spam en la sala.'));
 LanguageProvider.add(LanguageMap.english('You are silenced.').spanish('Te encuentras silenciado.'));
