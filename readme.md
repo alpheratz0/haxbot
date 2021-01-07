@@ -2,8 +2,7 @@
 
 ![bot logo](https://i.ibb.co/ynLzhWx/Sin-t-tulo.png)
 
-This bot uses the official [haxball headless api](https://github.com/haxball/haxball-issues/wiki/Headless-Host).
-This bot is currently under development.
+This bot uses the official [haxball headless api](https://github.com/haxball/haxball-issues/wiki/Headless-Host) and keep player statics using the indexedDB api. This bot is currently under development.
 
 ## Commands
 Here is the list of available commands for now
