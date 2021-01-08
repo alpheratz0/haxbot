@@ -4,6 +4,9 @@
 
 This bot uses the official [haxball headless api](https://github.com/haxball/haxball-issues/wiki/Headless-Host) and keep player statics using the indexedDB api. This bot is currently under development.
 
+## Admin chat
+If you are admin or superuser you can communicate with other connected admins on the room simply prefixing the message with the '#' symbol. 
+
 ## Commands
 Here is the list of available commands for now
 
