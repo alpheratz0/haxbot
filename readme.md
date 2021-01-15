@@ -63,6 +63,7 @@ Commands that only superusers can execute
 - !setspect `id` `position`
 - !merge `auth_from` `id`
 - !kickall `reason?`
+- !banall `reason?`
 
 ## Creating a new command
 First go to the corresponding folder of the commands, and create a new file, if the command is an user command use the `UserCommand` class, if the command is an administrative command use `AdministrativeCommand` class and if the command is a superuser command use the `SuperUserCommand` class.
