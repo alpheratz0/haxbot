@@ -4,6 +4,26 @@
 
 This bot uses the official [haxball headless api](https://github.com/haxball/haxball-issues/wiki/Headless-Host) and keep player statics using the indexedDB api. This bot is currently under development.
 
+## Running the bot
+First you need to install all dependencies
+```console
+foo@bar:~/haxbot $ yarn cache clean
+foo@bar:~/haxbot $ yarn install
+```
+
+Then edit the room configuration that is found on this path: `./src/room/configuration.ts` and set the room name and any other room setting as you want.
+
+After that you should run the following command to build the bot
+```console
+foo@bar:~/haxbot $ yarn run build
+```
+
+Then check the `./build` folder, it will contain a file called `bot.js`, copy its content.
+
+Go to the [haxball headless page](https://www.haxball.com/headless) and open the developer tools, if your using chrome or edge browser you can do it with the `ctrl + shift + i` shortcut.
+
+Then paste the bot code, solve the captcha and wait until the room link is generated, open it on a new tab, dont close the tab where you paste the code or the bot will stop working.
+
 ## Admin chat
 If you are admin or superuser you can communicate with other connected admins on the room simply prefixing the message with the '#' symbol. 
 
