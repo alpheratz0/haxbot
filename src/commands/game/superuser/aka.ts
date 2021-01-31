@@ -10,7 +10,7 @@ export const akaCommand = new SuperUserCommand('aka', ({ sender, args, room }: G
     if(!targetPlayer)
         return room.sendAnnouncement(LanguageProvider.get('Player not found.'), sender.id, colors.error);
 
-    PlayerDB.find(targetPlayer.name).then(record => {
+    PlayerDB.findByName(targetPlayer.name).then(record => {
         room.sendAnnouncement(`${targetPlayer.name}: ${record.names.join(", ")}`, sender.id, colors.superuser);
     })
 });
