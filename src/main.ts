@@ -39,6 +39,9 @@ room.onRoomLink = (url: string) => {
     room.setTeamColors(1, 0, 0xffffff, [0xff4912]);
     room.setTeamColors(2, 0, 0xffffff, [0x000000]);
     room.setRequireRecaptcha(false);
+
+    // prevent double initialization by multiple calls to this func
+    room.onRoomLink = () => {}
 }
 
 room.onPlayerJoin = (player: Player) => {   
