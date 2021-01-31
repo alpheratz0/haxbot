@@ -15,6 +15,7 @@ export const unmuteCommand = new AdministrativeCommand('unmute', ({ args, sender
             record.unmute();
             await PlayerDB.update(record);
             room.sendAnnouncement(LanguageProvider.get('{0} removed your silence penalty.', sender.name), targetPlayer.id, colors.user);
+            room.sendAnnouncement(LanguageProvider.get('You removed the silence penalty of {0}.', targetPlayer.name), sender.id, colors.admin);
         }
         else room.sendAnnouncement(LanguageProvider.get('{0} isnt silenced.', targetPlayer.name), sender.id, colors.admin);
     })

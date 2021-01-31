@@ -87,3 +87,4 @@ LanguageProvider.add(LanguageMap.english('{0} moved to spect position #{1}').spa
 LanguageProvider.add(LanguageMap.english('Auth not found on db.').spanish('Auth no encontrada en la base de datos.'));
 LanguageProvider.add(LanguageMap.english('Stats of {0} merged into {1}.').spanish('Estadísticas de {0} movidas a {1}.'));
 LanguageProvider.add(LanguageMap.english('Game cannot be started.').spanish('El juego no puede estar iniciado.'));
+LanguageProvider.add(LanguageMap.english('You removed the silence penalty of {0}.').spanish('Le has quitado el silencio a {0}.'));
