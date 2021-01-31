@@ -12,8 +12,8 @@ export const setAvatarCommand = new AdministrativeCommand('setavatar', ({ args, 
 
     room.setPlayerAvatar(targetId, avatar);
     
-    const message = avatar ? LanguageProvider.get('{0} avatar updated to {1}.').replace('{0}', targetPlayer.name).replace('{1}', avatar) :
-                             LanguageProvider.get('{0} avatar cleared.').replace('{0}', targetPlayer.name);
+    const message = avatar ? LanguageProvider.get('{0} avatar updated to {1}.', targetPlayer.name, avatar) :
+                             LanguageProvider.get('{0} avatar cleared.', targetPlayer.name);
 
     room.sendAnnouncement(message, sender.id, colors.admin);
 })

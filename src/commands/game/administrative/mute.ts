@@ -13,6 +13,6 @@ export const muteCommand = new AdministrativeCommand('mute', ({ sender, room, ar
     PlayerDB.findByName(targetPlayer.name).then(async record => {
         record.mute(3);
         await PlayerDB.update(record);
-        room.sendAnnouncement(LanguageProvider.get('{0} silenced 3m by administrator {1}.').replace('{0}', targetPlayer.name).replace('{1}', sender.name), undefined, colors.admin);
+        room.sendAnnouncement(LanguageProvider.get('{0} silenced 3m by administrator {1}.', targetPlayer.name, sender.name), undefined, colors.admin);
     })
 });

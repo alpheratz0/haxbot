@@ -17,6 +17,6 @@ export const banvoteCommand = new UserCommand('banvote', ({ sender, args, record
     if(Banvote.isRunning())
         return room.sendAnnouncement(LanguageProvider.get('A banvote is already running.'), sender.id, colors.error);
 
-    room.sendAnnouncement(LanguageProvider.get('{0} is banvoting {1}, use !yes or !no to vote.').replace('{0}', sender.name).replace('{1}', targetPlayer.name), undefined, colors.user);
+    room.sendAnnouncement(LanguageProvider.get('{0} is banvoting {1}, use !yes or !no to vote.', sender.name, targetPlayer.name), undefined, colors.user);
     Banvote.start(targetId);
 });

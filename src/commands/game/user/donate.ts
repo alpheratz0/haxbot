@@ -25,6 +25,6 @@ export const donateCommand = new UserCommand('donate', ({ args, sender, room, re
         PlayerDB.update(record);
     });
 
-    room.sendAnnouncement(LanguageProvider.get('Sent ${0} to {1}.').replace('{0}', ammount.toString()).replace('{1}', targetPlayer.name), sender.id, colors.user);
-    room.sendAnnouncement(LanguageProvider.get('Received ${0} from {1}.').replace('{0}', ammount.toString()).replace('{1}', sender.name), targetPlayer.id, colors.user);    
+    room.sendAnnouncement(LanguageProvider.get('Sent ${0} to {1}.', String(ammount), targetPlayer.name), sender.id, colors.user);
+    room.sendAnnouncement(LanguageProvider.get('Received ${0} from {1}.', String(ammount), sender.name), targetPlayer.id, colors.user);    
 });

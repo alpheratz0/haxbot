@@ -21,5 +21,5 @@ export const setSpectCommand = new SuperUserCommand('setspect', ({ room, args, s
     const reorderedSpectators = [...spectIds.slice(0, newPosition), targetId, ...spectIds.slice(newPosition)];
 
     room.reorderPlayers(reorderedSpectators, true);
-    room.sendAnnouncement(LanguageProvider.get('{0} moved to spect position #{1}').replace('{0}', targetPlayer.name).replace('{1}', String(newPosition)), sender.id, colors.superuser);
+    room.sendAnnouncement(LanguageProvider.get('{0} moved to spect position #{1}', targetPlayer.name, String(newPosition)), sender.id, colors.superuser);
 });

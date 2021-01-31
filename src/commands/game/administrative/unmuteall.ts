@@ -7,5 +7,5 @@ export const unmuteAllCommand = new AdministrativeCommand('unmuteall', async ({ 
     const mutedRecords = (await PlayerDB.getRecordsConnected()).filter(record => record.isMuted());
     mutedRecords.forEach(record => record.unmute());
     await PlayerDB.updateAll(mutedRecords);
-    room.sendAnnouncement(LanguageProvider.get('{0} cleared the mute pentalty on everyone.').replace('{0}', sender.name), undefined, colors.user);
+    room.sendAnnouncement(LanguageProvider.get('{0} cleared the mute pentalty on everyone.', sender.name), undefined, colors.user);
 })

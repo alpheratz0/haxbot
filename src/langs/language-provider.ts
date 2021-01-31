@@ -5,8 +5,11 @@ export class LanguageProvider {
     private static current: Language = Language.English;
     private static languageMap: LanguageMap[] = [];
     
-    static get(text: string, lang: Language = this.current): string {
-        return this.languageMap.find(map => map.is(text))?.get(lang);
+    static get(text: string, ...args: string[]): string {
+        let value = this.languageMap.find(map => map.is(text))?.get(this.current);
+        for(let i = 0; i < args.length; i++)
+            value = value.replace(`{${i}}`, args[i]);
+        return value;
     }
 
     static add(map: LanguageMap): LanguageMap {
