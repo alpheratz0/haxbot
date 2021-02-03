@@ -1,6 +1,6 @@
 {
   "name": "haxball-bot-futsal",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "description": "haxball bot for futsal maps",
   "main": "src/main.ts",
   "repository": "https://github.com/augus99/haxball-bot-futsal",

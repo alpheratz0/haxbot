@@ -1,6 +1,19 @@
-# Haxball bot with *Typescript*
+<p align="center"">
+    <h1 align="center">Haxball bot with <i>Typescript</i></h1>
+    <p align="center">
+        <img align="center" src="https://i.ibb.co/ynLzhWx/Sin-t-tulo.png">
+        </br>
+        <img src="https://img.shields.io/badge/made%20with-typescript-blue">
+        <img src="https://img.shields.io/badge/version-1.0.0-blue">
+        <img src="https://img.shields.io/badge/license-MIT-green">
+        <img src="https://img.shields.io/badge/open%20source-red">
+        <img src="https://img.shields.io/badge/suggestions-welcome-green">
+        <img src="https://img.shields.io/github/last-commit/augus99/haxbot?style=flat">
+        <img src="https://img.shields.io/github/commit-activity/y/augus99/haxbot?style=flat">
+        <!-- <img src="http://unmaintained.tech/badge.svg"> -->
+    </p>
+</p>
 
-![bot logo](https://i.ibb.co/ynLzhWx/Sin-t-tulo.png)
 
 This bot uses the official [haxball headless api](https://github.com/haxball/haxball-issues/wiki/Headless-Host) and keep player statics using the indexedDB api. This bot is currently under development.
 
@@ -61,9 +74,10 @@ Commands that only admins and superusers can execute
 - !setavatar `id` `avatar?`
 - !unmuteall
 - !rainbow
-- !x1
-- !x3
-- !penalties
+- !small
+- !classic
+- !big
+- !huge
 
 ## Superuser commands
 Commands that only superusers can execute
