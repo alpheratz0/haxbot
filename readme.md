@@ -3,6 +3,7 @@
     <p align="center">
         <img align="center" src="https://i.ibb.co/ynLzhWx/Sin-t-tulo.png">
         </br>
+        </br>
         <img src="https://img.shields.io/badge/made%20with-typescript-blue">
         <img src="https://img.shields.io/badge/version-1.0.0-blue">
         <img src="https://img.shields.io/badge/license-MIT-green">
