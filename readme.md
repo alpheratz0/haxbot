@@ -39,7 +39,7 @@ Go to the [haxball headless page](https://www.haxball.com/headless) and open the
 Then paste the bot code, solve the captcha and wait until the room link is generated, open it on a new tab, dont close the tab where you paste the code or the bot will stop working.
 
 ## Admin chat
-If you are admin or superuser you can communicate with other connected admins on the room simply prefixing the message with the '#' symbol. 
+If you are admin or superuser you can communicate with other connected admins on the room simply prefixing the message with the '#' symbol.
 
 ## Commands
 Here is the list of available commands for now
@@ -105,7 +105,7 @@ First go to the corresponding folder of the commands, and create a new file, if 
 
 Filename: `command-name.ts` \
 Location: `./src/commands/game/administrative` \
-Content: 
+Content:
 ```ts
 import { AdministrativeCommand, GameCommandContext } from "..";
 
@@ -136,7 +136,3 @@ export class GameCommandManager {
 }
 
 ```
-
-## Credits
-
-Pull request template is a short version of the [template](https://embeddedartistry.com/blog/2017/08/04/a-github-pull-request-template-for-your-projects/) made by [Phillip Johnston](https://embeddedartistry.com/blog/author/phillip/).
