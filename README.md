@@ -6,37 +6,25 @@
         </br>
         <img src="https://img.shields.io/badge/made%20with-typescript-blue">
         <img src="https://img.shields.io/badge/version-1.0.0-blue">
-        <img src="https://img.shields.io/badge/license-MIT-green">
+        <img src="https://img.shields.io/badge/license-GPLv2.0-green">
         <img src="https://img.shields.io/badge/open%20source-red">
-        <img src="https://img.shields.io/badge/suggestions-welcome-green">
-        <img src="https://img.shields.io/github/last-commit/augus99/haxbot?style=flat">
-        <img src="https://img.shields.io/github/commit-activity/y/augus99/haxbot?style=flat">
-        <!-- <img src="http://unmaintained.tech/badge.svg"> -->
+        <img src="https://img.shields.io/github/last-commit/alpheratz0/haxbot?style=flat">
+        <img src="https://img.shields.io/github/commit-activity/y/alpheratz0/haxbot?style=flat">
+        <img src="http://unmaintained.tech/badge.svg">
     </p>
 </p>
 
 
-This bot uses the official [haxball headless api](https://github.com/haxball/haxball-issues/wiki/Headless-Host) and keep player statics using the indexedDB api. This bot is currently under development.
+This bot uses the official [haxball headless api](https://github.com/haxball/haxball-issues/wiki/Headless-Host) and keep player statics using the indexedDB api.
 
 ## Running the bot
-First you need to install all dependencies
-```console
-foo@bar:~/haxbot $ yarn cache clean
-foo@bar:~/haxbot $ yarn install
-```
+First you need to install all the dependencies `yarn cache clean && yarn install`
 
-Then edit the room configuration that is found on this path: `./src/room/configuration.ts` and set the room name and any other room setting as you want.
+Then edit the room configuration at `src/room/configuration.ts` as you want.
 
-After that you should run the following command to build the bot
-```console
-foo@bar:~/haxbot $ yarn run build
-```
+After that you are ready to generate the .js file for the bot, just run `yarn run build`
 
-Then check the `./build` folder, it will contain a file called `bot.js`, copy its content.
-
-Go to the [haxball headless page](https://www.haxball.com/headless) and open the developer tools, if your using chrome or edge browser you can do it with the `ctrl + shift + i` shortcut.
-
-Then paste the bot code, solve the captcha and wait until the room link is generated, open it on a new tab, dont close the tab where you paste the code or the bot will stop working.
+The bot code will be placed at the `build` directory.
 
 ## Admin chat
 If you are admin or superuser you can communicate with other connected admins on the room simply prefixing the message with the '#' symbol.
