@@ -1,5 +1,4 @@
 export interface GeoLocation {
-
     /** The country code. */
     code: string;
 

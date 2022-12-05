@@ -1,19 +1,19 @@
-import { Language } from "./language";
+import { Language } from './language';
 
 export class LanguageText {
-    private language: Language;
-    private text: string;
-    
-    constructor(text: string, lang: Language) {
-        this.language = lang;
-        this.text = text;
-    }
+	private language: Language;
+	private text: string;
 
-    usesLang(lang: Language): boolean {
-        return this.language == lang;
-    }
+	constructor(text: string, lang: Language) {
+		this.language = lang;
+		this.text = text;
+	}
 
-    get(): string {
-        return this.text;
-    }
+	usesLang(lang: Language): boolean {
+		return this.language == lang;
+	}
+
+	get(): string {
+		return this.text;
+	}
 }

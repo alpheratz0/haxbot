@@ -1,5 +1,4 @@
 export interface DiscProperties {
-
     /** The x coordinate of the disc's position. */
     x?: number;
 
