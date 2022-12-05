@@ -1,7 +1,7 @@
 <p align="center"">
     <h1 align="center">Haxball bot with <i>Typescript</i></h1>
     <p align="center">
-        <img align="center" src="https://i.ibb.co/ynLzhWx/Sin-t-tulo.png">
+        <img align="center" src="https://raw.githubusercontent.com/alpheratz0/haxbot/master/assets/logo.png">
         </br>
         </br>
         <img src="https://img.shields.io/badge/made%20with-typescript-blue">
