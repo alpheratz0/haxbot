@@ -1,11 +1,11 @@
 {
-	"name": "haxball-bot-futsal",
+	"name": "haxbot",
 	"version": "1.0.0",
 	"description": "haxball bot for futsal maps",
 	"main": "src/main.ts",
-	"repository": "https://github.com/augus99/haxball-bot-futsal",
-	"author": "Augusto Castelo",
-	"license": "MIT",
+	"repository": "https://github.com/alpheratz0/haxbot",
+	"author": "alpheratz0 <alpheratz99@protonmail.com>",
+	"license": "GPL-2.0-only",
 	"devDependencies": {
 		"ts-loader": "^8.0.12",
 		"typescript": "^4.1.2",

@@ -18,11 +18,3 @@ export const colorCommand = new AdministrativeCommand(
 		});
 	}
 );
-room.sendAnnouncement(
-				LanguageProvider.get('Updated color to: ') + colorHtml,
-				sender.id,
-				color
-			);
-		});
-	}
-);
