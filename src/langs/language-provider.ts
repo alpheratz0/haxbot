@@ -143,7 +143,7 @@ LanguageProvider.add(
 );
 LanguageProvider.add(
 	LanguageMap.english('Someone voted yes.').spanish(
-		'Alguien votó yes en el banvote.'
+		'Alguien votó si en el banvote.'
 	)
 );
 LanguageProvider.add(
