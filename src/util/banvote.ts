@@ -70,7 +70,7 @@ export class Banvote {
 				);
 				return;
 			}
-			if (result.negatives > result.positives && room.getPlayer(id))
+			if (result.positives > result.negatives && room.getPlayer(id))
 				room.kickPlayer(id, 'Banvote.', true);
 			room.sendAnnouncement(
 				`${LanguageProvider.get('Banvote result')}: ${Math.floor(
