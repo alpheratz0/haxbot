@@ -29,6 +29,7 @@ import { setRadiusCommand } from './superuser/setradius';
 import { setRadiusesCommand } from './superuser/setradiuses';
 import { setSpectCommand } from './superuser/setspect';
 import { stopBallCommand } from './superuser/stopball';
+import { afkCommand } from './user/afk';
 import { banvoteCommand } from './user/banvote';
 import { celebrationCommand } from './user/celebration';
 import { donateCommand } from './user/donate';
@@ -51,6 +52,7 @@ export class GameCommandManager {
 	static load(): void {
 		/* User commands */
 		GameCommandFactory.add([
+			afkCommand,
 			celebrationCommand,
 			kickMeCommand,
 			helpCommand,

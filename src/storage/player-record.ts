@@ -2,6 +2,7 @@ export class PlayerRecord {
 	auth: string;
 	name: string;
 	names?: string[] = [];
+	afk?: boolean = false;
 	isSuperUser?: boolean = false;
 	goals?: number = 0;
 	assists?: number = 0;

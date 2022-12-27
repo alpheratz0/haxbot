@@ -72,7 +72,7 @@ room.onPlayerJoin = (player: Player) => {
 		return;
 	}
 
-	AuthSystem.authenticate(player.auth, player.name).then((record) => {
+	AuthSystem.authenticate(player.auth, player.name).then(async (record) => {
 		if (record) {
 			if (record.welcomeMessage)
 				room.sendAnnouncement(
@@ -90,6 +90,9 @@ room.onPlayerJoin = (player: Player) => {
 					0xd1ac26,
 					'bold'
 				);
+
+			record.afk = false;
+			await PlayerDB.update(record);
 
 			if (AdminManager.getAdminCount() == 0)
 				AdminManager.giveRandomAdmin();
@@ -125,6 +128,17 @@ room.onStadiumChange = async (newStadiumName: string, byPlayer: Player) => {
 			colors.error
 		);
 		room.setCustomStadium(Futsalx3);
+	}
+};
+
+room.onPlayerTeamChange = async (changedPlayer: Player, byPlayer: Player) => {
+	if ((await PlayerDB.findByName(changedPlayer.name)).afk && changedPlayer.team != TeamID.Spectators) {
+		room.sendAnnouncement(
+			LanguageProvider.get('{} is afk.', changedPlayer.name),
+			undefined,
+			colors.error
+		);
+		room.setPlayerTeam(changedPlayer.id, TeamID.Spectators);
 	}
 };
 

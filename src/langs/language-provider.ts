@@ -302,3 +302,17 @@ LanguageProvider.add(
 		'Le has quitado el silencio a {0}.'
 	)
 );
+LanguageProvider.add(
+	LanguageMap.english('You must be a spectator to enter afk mode.').spanish(
+		'Debes ser un espectador para entrar en modo afk.'
+	)
+);
+LanguageProvider.add(
+	LanguageMap.english('{0} is afk now.').spanish('{0} esta afk.')
+);
+LanguageProvider.add(
+	LanguageMap.english('{0} is not afk now.').spanish('{0} no esta afk.')
+);
+LanguageProvider.add(
+	LanguageMap.english('{0} is afk.').spanish('{0} se encuentra afk.')
+);
