@@ -5,10 +5,17 @@ import { PlayerDB } from '../../../storage/player-db';
 
 export const whisperCommand = new UserCommand(
 	'w',
-	async ({ room, sender, args }: GameCommandContext) => {
+	async ({ room, record, sender, args }: GameCommandContext) => {
 		const targetId = parseInt(args.shift());
 		const targetPlayer = room.getPlayer(targetId);
 		const message = args.join(' ').trim();
+
+		if (!record.mds)
+			return room.sendAnnouncement(
+				LanguageProvider.get('You have the whispers disabled.'),
+				sender.id,
+				colors.error
+			);
 
 		if (!targetPlayer)
 			return room.sendAnnouncement(
@@ -31,6 +38,15 @@ export const whisperCommand = new UserCommand(
 				colors.error
 			);
 
+		const targetRecord = await PlayerDB.findByName(targetPlayer.name);
+
+		if (!targetRecord.mds)
+			return room.sendAnnouncement(
+				LanguageProvider.get('Target player cannot receive whispers.'),
+				sender.id,
+				colors.error
+			);
+
 		room.sendAnnouncement(
 			`>> ${targetPlayer.name} [${targetPlayer.id}]: ${message}`,
 			sender.id,
@@ -44,7 +60,6 @@ export const whisperCommand = new UserCommand(
 			2
 		);
 
-		const targetRecord = await PlayerDB.findByName(targetPlayer.name);
 		targetRecord.lastWhisperId = sender.id;
 		await PlayerDB.update(targetRecord);
 	}

@@ -322,3 +322,25 @@ LanguageProvider.add(
 		'Nadie te ha enviado un mensaje directo recientemente.'
 	)
 );
+LanguageProvider.add(
+	LanguageMap.english('Now players can send you whispers.').spanish(
+		'Ahora los jugadores pueden mandarte mensajes directos.'
+	)
+);
+LanguageProvider.add(
+	LanguageMap.english('Now players cannot send you whispers.').spanish(
+		'Ahora los jugadores no pueden mandarte mensajes directos.'
+	)
+);
+
+LanguageProvider.add(
+	LanguageMap.english('You have the whispers disabled.').spanish(
+		'Tienes los mensajes directos desactivados.'
+	)
+);
+
+LanguageProvider.add(
+	LanguageMap.english('Target player cannot receive whispers.').spanish(
+		'El jugador no puede recibir mensajes directos.'
+	)
+);

@@ -17,6 +17,7 @@ export class PlayerRecord {
 	color?: number = 0xffffff;
 	mutedUntil?: number = 0;
 	lastWhisperId?: number = -1;
+	mds?: boolean = true;
 
 	constructor(auth: string, name: string) {
 		this.name = name;
@@ -79,6 +80,7 @@ export class PlayerRecord {
 		this.scoreMessage = other.scoreMessage;
 		this.welcomeMessage = other.welcomeMessage;
 		this.lastWhisperId = other.lastWhisperId;
+		this.mds = other.mds;
 
 		other.reset();
 	}
@@ -96,5 +98,6 @@ export class PlayerRecord {
 		this.color = 0xffffff;
 		this.names = [this.name];
 		this.lastWhisperId = -1;
+		this.mds = true;
 	}
 }

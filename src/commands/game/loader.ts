@@ -47,6 +47,7 @@ import { welcomeCommand } from './user/welcome';
 import { whisperCommand } from './user/whisper';
 import { yesCommand } from './user/yes';
 import { replyCommand } from './user/reply';
+import { mdsCommand } from './user/mds';
 
 export class GameCommandManager {
 	/** Loads all commands. */
@@ -71,6 +72,7 @@ export class GameCommandManager {
 			yesCommand,
 			noCommand,
 			replyCommand,
+			mdsCommand,
 
 			/* Administrative commands */
 			colorCommand,
