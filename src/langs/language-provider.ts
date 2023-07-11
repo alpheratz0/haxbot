@@ -316,3 +316,9 @@ LanguageProvider.add(
 LanguageProvider.add(
 	LanguageMap.english('{0} is afk.').spanish('{0} se encuentra afk.')
 );
+
+LanguageProvider.add(
+	LanguageMap.english('Nobody sent you a whisper recently.').spanish(
+		'Nadie te ha enviado un mensaje directo recientemente.'
+	)
+);

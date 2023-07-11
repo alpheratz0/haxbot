@@ -46,74 +46,65 @@ import { topScorersCommand } from './user/top-scorers';
 import { welcomeCommand } from './user/welcome';
 import { whisperCommand } from './user/whisper';
 import { yesCommand } from './user/yes';
+import { replyCommand } from './user/reply';
 
 export class GameCommandManager {
 	/** Loads all commands. */
 	static load(): void {
-		/* User commands */
 		GameCommandFactory.add([
+			/* User commands */
 			afkCommand,
 			celebrationCommand,
 			kickMeCommand,
 			helpCommand,
 			welcomeCommand,
-			whisperCommand
-		]);
-		GameCommandFactory.add([
+			whisperCommand,
 			donateCommand,
 			loginCommand,
 			topScorersCommand,
 			topAssistsCommand,
-			topCashCommand
-		]);
-		GameCommandFactory.add([
+			topCashCommand,
 			topGoalkeepersCommand,
 			rankingsCommand,
 			statsCommand,
 			banvoteCommand,
 			yesCommand,
-			noCommand
-		]);
+			noCommand,
+			replyCommand,
 
-		/* Administrative commands */
-		GameCommandFactory.add([
+			/* Administrative commands */
 			colorCommand,
 			clearBansCommand,
 			winnerCommand,
 			muteCommand,
-			notifyCommand
-		]);
-		GameCommandFactory.add([
+			notifyCommand,
 			swapCommand,
 			setAvatarCommand,
 			unmuteCommand,
 			unmuteAllCommand,
-			rainbowCommand
-		]);
-		GameCommandFactory.add([x3Command, x1Command, penaltiesCommand]);
+			rainbowCommand,
+			x3Command,
+			x1Command,
+			penaltiesCommand,
 
-		/* Superuser commands */
-		GameCommandFactory.add([
+			/* Superuser commands */
 			adminCommand,
 			akaCommand,
 			banCommand,
 			delayCommand,
-			powerCommand
-		]);
-		GameCommandFactory.add([
+			powerCommand,
 			saveRecCommand,
 			searchCommand,
 			setAvatarsCommand,
 			setBallCommand,
-			setPasswordCommand
-		]);
-		GameCommandFactory.add([
+			setPasswordCommand,
 			setRadiusCommand,
 			stopBallCommand,
 			setRadiusesCommand,
 			setSpectCommand,
-			mergeCommand
+			mergeCommand,
+			kickAllCommand,
+			banAllCommand
 		]);
-		GameCommandFactory.add([kickAllCommand, banAllCommand]);
 	}
 }

@@ -92,6 +92,7 @@ room.onPlayerJoin = (player: Player) => {
 				);
 
 			record.afk = false;
+			record.lastWhisperId = -1;
 			await PlayerDB.update(record);
 
 			if (AdminManager.getAdminCount() == 0)

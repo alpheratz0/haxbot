@@ -1,10 +1,11 @@
 import { GameCommandContext, UserCommand } from '..';
 import { LanguageProvider } from '../../../langs/language-provider';
 import { colors } from '../../../room/configuration';
+import { PlayerDB } from '../../../storage/player-db';
 
 export const whisperCommand = new UserCommand(
 	'w',
-	({ room, sender, args }: GameCommandContext) => {
+	async ({ room, sender, args }: GameCommandContext) => {
 		const targetId = parseInt(args.shift());
 		const targetPlayer = room.getPlayer(targetId);
 		const message = args.join(' ').trim();
@@ -42,5 +43,9 @@ export const whisperCommand = new UserCommand(
 			'normal',
 			2
 		);
+
+		const targetRecord = await PlayerDB.findByName(targetPlayer.name);
+		targetRecord.lastWhisperId = sender.id;
+		await PlayerDB.update(targetRecord);
 	}
 );
