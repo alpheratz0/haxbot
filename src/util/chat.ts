@@ -44,4 +44,10 @@ export class Chat {
 			this.rainbowColors[this.rainbowIndex]
 		);
 	}
+
+	static rainbowFull(message: string): void {
+		for (let i = 0; i < this.rainbowColors.length; ++i) {
+			this.rainbow(message);
+		}
+	}
 }

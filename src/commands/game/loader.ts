@@ -5,6 +5,7 @@ import { muteCommand } from './administrative/mute';
 import { notifyCommand } from './administrative/notify';
 import { penaltiesCommand } from './administrative/penalties';
 import { rainbowCommand } from './administrative/rainbow';
+import { sayRainbowCommand } from './superuser/sayrainbow';
 import { setAvatarCommand } from './administrative/setavatar';
 import { swapCommand } from './administrative/swap';
 import { unmuteCommand } from './administrative/unmute';
@@ -110,7 +111,8 @@ export class GameCommandManager {
 			setTopSpectCommand,
 			mergeCommand,
 			kickAllCommand,
-			banAllCommand
+			banAllCommand,
+			sayRainbowCommand
 		]);
 	}
 }
