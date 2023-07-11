@@ -16,6 +16,7 @@ export const roomConfiguration: RoomConfig = {
 };
 
 export const userConfiguration = {
+	canUsePotasioFriendCommand: false,
 	superuserPassword: '' || PasswordGenerator.generate(),
 	language: Language.English
 };

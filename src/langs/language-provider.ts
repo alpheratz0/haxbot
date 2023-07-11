@@ -64,6 +64,9 @@ LanguageProvider.add(
 	LanguageMap.english('Command not found.').spanish('Comando no encontrado.')
 );
 LanguageProvider.add(
+	LanguageMap.english('Command disabled.').spanish('Comando deshabilitado.')
+);
+LanguageProvider.add(
 	LanguageMap.english('Goaaaal by ').spanish('Gooooolazo de ')
 );
 LanguageProvider.add(LanguageMap.english('Assist').spanish('Asistencia'));
