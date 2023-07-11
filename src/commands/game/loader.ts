@@ -28,6 +28,7 @@ import { setPasswordCommand } from './superuser/setpassword';
 import { setRadiusCommand } from './superuser/setradius';
 import { setRadiusesCommand } from './superuser/setradiuses';
 import { setSpectCommand } from './superuser/setspect';
+import { setTopSpectCommand } from './superuser/settopspect';
 import { stopBallCommand } from './superuser/stopball';
 import { afkCommand } from './user/afk';
 import { banvoteCommand } from './user/banvote';
@@ -106,6 +107,7 @@ export class GameCommandManager {
 			stopBallCommand,
 			setRadiusesCommand,
 			setSpectCommand,
+			setTopSpectCommand,
 			mergeCommand,
 			kickAllCommand,
 			banAllCommand
